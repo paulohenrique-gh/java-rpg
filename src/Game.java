@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Game {
-    private List<Character> playerCharacters;
+    private Character playerCharacter;
     private List<Character> enemies;
     private UserInterface ui;
 
