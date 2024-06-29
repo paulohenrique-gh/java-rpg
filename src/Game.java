@@ -6,7 +6,6 @@ import java.util.List;
 public class Game {
     private Character playerCharacter;
     private List<Enemy> enemies;
-    private Character[] turnOrder;
 
     public Character getPlayerCharacter() {
         return playerCharacter;
@@ -22,5 +21,23 @@ public class Game {
 
     public void setEnemies(List<Enemy> enemies) {
         this.enemies = enemies;
+    }
+
+    public void start() {
+        for (Enemy enemy : this.enemies) {
+            Battle battle = new Battle(playerCharacter, enemy);
+
+            battle.start();
+            Character winner = battle.getWinner();
+
+            if (winner != this.getPlayerCharacter()) {
+                System.out.println("Você perdeu!");
+                break;
+            }
+
+            System.out.println("Você venceu essa batalha");
+        }
+
+        System.out.println("fim do jogo");
     }
 }
