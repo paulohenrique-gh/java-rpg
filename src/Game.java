@@ -1,7 +1,11 @@
 import models.base.Character;
 import models.base.Enemy;
 import models.base.RegularMob;
+import models.base.Boss;
 import models.enemies.Goblin;
+import models.enemies.Skeleton;
+import models.enemies.Troll;
+import models.enemies.Dragon;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,11 +34,11 @@ public class Game {
 
     public void setEnemies() {
         RegularMob enemy1 = new Goblin();
-//        RegularMob enemy2 = new Skeleton();
-//        RegularMob enemy3 = new Troll();
-//        Boss boss = new Dragon();
+        RegularMob enemy2 = new Skeleton();
+        RegularMob enemy3 = new Troll();
+        Boss boss = new Dragon();
 
-        this.enemies = new ArrayList<Enemy>(List.of(enemy1));
+        this.enemies = new ArrayList<Enemy>(List.of(enemy1, enemy2, enemy3, boss));
     }
 
     public void start() {

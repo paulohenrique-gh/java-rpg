@@ -64,8 +64,8 @@ public class UserInterface {
 
         while (action == null) {
             System.out.println("Escolha uma opção:\n");
-            System.out.println("1 - Atacar\n");
-            System.out.println("2 - Fugir\n");
+            System.out.println("1 - Atacar");
+            System.out.println("2 - Fugir");
 
             String chosenOption = scanner.nextLine();
 

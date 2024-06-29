@@ -58,8 +58,6 @@ public class Battle {
             character1.setCurrentAction(action);
             character2.setCurrentAction(action);
 
-            if (action instanceof EscapeAction) break;
-
             startTurn(character1, character2);
 
             winner = this.validateWinner(character1, character2);
@@ -68,6 +66,8 @@ public class Battle {
             startTurn(character2, character1);
 
             winner = this.validateWinner(character2, character1);
+
+            if (action instanceof EscapeAction) break;
         }
 
         this.setWinner(winner);

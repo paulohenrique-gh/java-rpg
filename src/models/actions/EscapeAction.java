@@ -10,6 +10,8 @@ public class EscapeAction extends BattleAction {
     }
 
     private void log(String activeName) {
+        System.out.println("================================================");
         System.out.println(activeName + " fugiu da batalha");
+        System.out.println("================================================");
     }
 }

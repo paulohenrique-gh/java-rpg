@@ -8,11 +8,11 @@ public class Goblin extends RegularMob {
         this.setName("Goblin");
         this.setHitPoints(30);
         this.setAttack(6);
-        this.setDefense(4);
+        this.setDefense(2);
         this.setResFire(1);
         this.setResIce(3);
         this.setResThunder(3);
-        this.setType("Regular Mob");
+        this.setType("Inimigo comum");
         this.setExp(20);
     }
 

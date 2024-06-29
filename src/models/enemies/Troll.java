@@ -3,6 +3,19 @@ package models.enemies;
 import models.base.RegularMob;
 
 public class Troll extends RegularMob {
+    public Troll() {
+        super();
+        this.setName("Troll");
+        this.setHitPoints(60);
+        this.setAttack(9);
+        this.setDefense(5);
+        this.setResFire(4);
+        this.setResIce(2);
+        this.setResThunder(-4);
+        this.setType("Inimigo comum");
+        this.setExp(50);
+    }
+
     @Override
     public String toString() {
         return "Troll{" +
