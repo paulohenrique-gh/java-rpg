@@ -1,12 +1,14 @@
 package models.playerCharacters;
 
-import models.Skill;
+import models.base.SkillAction;
 import models.base.Character;
+import models.skills.WeakHeal;
 
 public class Warrior extends Character {
     public Warrior() {
         super();
-        this.setHitPoints(100);
+        this.setMaxHitPoints(100);
+        this.setCurHitPoints(100);
         this.setAttack(9);
         this.setDefense(5);
         this.setResFire(5);
@@ -16,9 +18,9 @@ public class Warrior extends Character {
     }
 
     private void setSkills() {
-        Skill skill1 = new Skill("Jogar pedra", "físico", 5);
+        SkillAction curaFraca = new WeakHeal();
 
-        this.addSkill(skill1);
+        this.addSkill(curaFraca);
     }
 
     public static String getClassDescription() {
@@ -29,13 +31,15 @@ public class Warrior extends Character {
     public String toString() {
         return "Warrior{" +
                 "name='" + name + '\'' +
-                ", hitPoints=" + hitPoints +
-                ", strength=" + attack +
+                ", maxHitPoints=" + maxHitPoints +
+                ", curHitPoints=" + curHitPoints +
+                ", attack=" + attack +
                 ", defense=" + defense +
                 ", skillList=" + skillList +
                 ", resFire=" + resFire +
                 ", resIce=" + resIce +
                 ", resThunder=" + resThunder +
+                ", currentAction=" + currentAction +
                 '}';
     }
 }

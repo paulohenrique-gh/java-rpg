@@ -6,7 +6,8 @@ public class Goblin extends RegularMob {
     public Goblin() {
         super();
         this.setName("Goblin");
-        this.setHitPoints(30);
+        this.setMaxHitPoints(30);
+        this.setCurHitPoints(30);
         this.setAttack(6);
         this.setDefense(2);
         this.setResFire(1);
@@ -20,13 +21,15 @@ public class Goblin extends RegularMob {
     public String toString() {
         return "Goblin{" +
                 "name='" + name + '\'' +
-                ", hitPoints=" + hitPoints +
-                ", strength=" + attack +
+                ", maxHitPoints=" + maxHitPoints +
+                ", curHitPoints=" + curHitPoints +
+                ", attack=" + attack +
                 ", defense=" + defense +
                 ", skillList=" + skillList +
                 ", resFire=" + resFire +
                 ", resIce=" + resIce +
                 ", resThunder=" + resThunder +
+                ", currentAction=" + currentAction +
                 '}';
     }
 }

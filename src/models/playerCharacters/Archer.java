@@ -11,7 +11,7 @@ public class Archer extends Character {
     public String toString() {
         return "Archer{" +
                 "name='" + name + '\'' +
-                ", hitPoints=" + hitPoints +
+                ", hitPoints=" + maxHitPoints +
                 ", strength=" + attack +
                 ", defense=" + defense +
                 ", skillList=" + skillList +

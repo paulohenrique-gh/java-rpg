@@ -79,10 +79,10 @@ public class Battle {
 
 
     private Character validateWinner(Character activeCharacter, Character targetCharacter) {
-        if (activeCharacter.getHitPoints() <= 0) {
+        if (activeCharacter.getCurHitPoints() <= 0) {
             return targetCharacter;
         }
-        if (targetCharacter.getHitPoints() <= 0) {
+        if (targetCharacter.getCurHitPoints() <= 0) {
             return activeCharacter;
         }
 

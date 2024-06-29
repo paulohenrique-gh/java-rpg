@@ -6,7 +6,8 @@ public class Dragon extends Boss {
     public Dragon() {
         super();
         this.setName("Dragão");
-        this.setHitPoints(100);
+        this.setMaxHitPoints(100);
+        this.setCurHitPoints(100);
         this.setAttack(15);
         this.setDefense(6);
         this.setResFire(5);
@@ -20,7 +21,7 @@ public class Dragon extends Boss {
     public String toString() {
         return "Dragon{" +
                 "name='" + name + '\'' +
-                ", hitPoints=" + hitPoints +
+                ", hitPoints=" + maxHitPoints +
                 ", strength=" + attack +
                 ", defense=" + defense +
                 ", skillList=" + skillList +

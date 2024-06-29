@@ -7,10 +7,10 @@ public class AttackAction extends BattleAction {
 
     @Override
     public void perform(Character activeCharacter, Character targetCharacter) {
-        int prevHp = targetCharacter.getHitPoints();
-        targetCharacter.setHitPoints(prevHp + targetCharacter.getDefense() - activeCharacter.getAttack());
+        int prevHp = targetCharacter.getCurHitPoints();
+        targetCharacter.setCurHitPoints(prevHp + targetCharacter.getDefense() - activeCharacter.getAttack());
         this.resetNegativeHp(targetCharacter);
-        this.logAction(activeCharacter.getName(), targetCharacter.getName(), prevHp, targetCharacter.getHitPoints());
+        this.logAction(activeCharacter.getName(), targetCharacter.getName(), prevHp, targetCharacter.getCurHitPoints());
     }
 
     private void logAction(String activeName, String targetName, int prevHp, int curHp) {

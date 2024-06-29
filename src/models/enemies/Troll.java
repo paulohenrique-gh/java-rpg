@@ -6,7 +6,8 @@ public class Troll extends RegularMob {
     public Troll() {
         super();
         this.setName("Troll");
-        this.setHitPoints(60);
+        this.setMaxHitPoints(60);
+        this.setCurHitPoints(60);
         this.setAttack(9);
         this.setDefense(5);
         this.setResFire(4);
@@ -20,7 +21,7 @@ public class Troll extends RegularMob {
     public String toString() {
         return "Troll{" +
                 "name='" + name + '\'' +
-                ", hitPoints=" + hitPoints +
+                ", hitPoints=" + maxHitPoints +
                 ", strength=" + attack +
                 ", defense=" + defense +
                 ", skillList=" + skillList +

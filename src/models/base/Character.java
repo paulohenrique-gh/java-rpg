@@ -1,23 +1,22 @@
 package models.base;
 
-import models.Skill;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Character {
     protected String name;
-    protected int hitPoints;
+    protected int maxHitPoints;
+    protected int curHitPoints;
     protected int attack;
     protected int defense;
-    protected List<Skill> skillList;
+    protected List<SkillAction> skillList;
     protected int resFire;
     protected int resIce;
     protected int resThunder;
     protected BattleAction currentAction;
 
     public Character() {
-        this.skillList = new ArrayList<Skill>();
+        this.skillList = new ArrayList<SkillAction>();
     }
 
     public String getName() {
@@ -28,12 +27,27 @@ public class Character {
         this.name = name;
     }
 
-    public int getHitPoints() {
-        return hitPoints;
+    public int getMaxHitPoints() {
+        return maxHitPoints;
     }
 
-    public void setHitPoints(int hitPoints) {
-        this.hitPoints = hitPoints;
+    public void setMaxHitPoints(int maxHitPoints) {
+        this.maxHitPoints = maxHitPoints;
+    }
+
+    public int getCurHitPoints() {
+        return curHitPoints;
+    }
+
+    public void setCurHitPoints(int curHitPoints) {
+        this.curHitPoints = curHitPoints;
+
+        if (this.curHitPoints > this.maxHitPoints) this.curHitPoints = this.maxHitPoints;
+        if (this.curHitPoints < 0) this.curHitPoints = 0;
+    }
+
+    public void setSkillList(List<SkillAction> skillList) {
+        this.skillList = skillList;
     }
 
     public int getAttack() {
@@ -84,16 +98,15 @@ public class Character {
         this.currentAction = currentAction;
     }
 
-    public void performAction(Character targetCharacter) {
-        this.currentAction.perform(this, targetCharacter);
-    }
-
-    public void addSkill(Skill skill) {
+    public void addSkill(SkillAction skill) {
         this.skillList.add(skill);
     }
 
-    public void attack(Character target) {
-        target.setHitPoints(target.getHitPoints() - this.getAttack());
-        System.out.println(this.getName() + " attacked " + target.getName());
+    public List<SkillAction> getSkillList() {
+        return this.skillList;
+    }
+
+    public void performAction(Character targetCharacter) {
+        this.currentAction.perform(this, targetCharacter);
     }
 }

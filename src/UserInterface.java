@@ -2,11 +2,13 @@ import models.actions.AttackAction;
 import models.actions.EscapeAction;
 import models.base.BattleAction;
 import models.base.Character;
+import models.base.SkillAction;
 import models.playerCharacters.Archer;
 import models.playerCharacters.Cleric;
 import models.playerCharacters.Mage;
 import models.playerCharacters.Warrior;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -65,23 +67,56 @@ public class UserInterface {
         while (action == null) {
             System.out.println("Escolha uma opção:\n");
             System.out.println("1 - Atacar");
-            System.out.println("2 - Fugir");
+            System.out.println("2 - Usar habilidade");
+            System.out.println("3 - Fugir");
 
             String chosenOption = scanner.nextLine();
 
-            switch(chosenOption) {
+            switch (chosenOption) {
                 case "1":
                     action = new AttackAction();
                     break;
                 case "2":
+                    action = this.chooseSkill();
+                    break;
+                case "3":
                     action = new EscapeAction();
                     break;
                 default:
-                    System.out.println("Opção inválida");;
-            };
+                    System.out.println("Opção inválida");
+                    ;
+            }
+            ;
         }
 
         return action;
+    }
+
+    private SkillAction chooseSkill() {
+        SkillAction skill = null;
+
+        while (skill == null) {
+            System.out.println("Escolha uma habilidade:\n");
+            List<SkillAction> skills = this.selectedCharacter.getSkillList();
+            for (int i = 0; i < skills.size(); i++) {
+                System.out.println((i + 1) + " - " + skills.get(i).getName());
+            }
+
+            String chosenOption = scanner.nextLine();
+
+            try {
+                int option = Integer.parseInt(chosenOption);
+                if (option <= 1 && option <= skills.size()) {
+                    skill = skills.get(option - 1);
+                } else {
+                    System.out.println("Opção inválida");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Opção inválida");
+            }
+        }
+
+        return skill;
     }
 
     public Character getSelectedCharacter() {

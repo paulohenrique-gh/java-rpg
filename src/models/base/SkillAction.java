@@ -1,17 +1,9 @@
-package models;
+package models.base;
 
-public class Skill {
+public abstract class SkillAction extends BattleAction {
     private String name;
     private String type;
     private int baseDamage;
-
-    public Skill(String name, String type, int baseDamage) {
-        this.name = name;
-        this.type = type;
-        this.baseDamage = baseDamage;
-    }
-
-    public Skill() {}
 
     public String getName() {
         return name;

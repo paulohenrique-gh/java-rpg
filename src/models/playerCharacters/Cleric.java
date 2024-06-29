@@ -11,7 +11,7 @@ public class Cleric extends Character {
     public String toString() {
         return "Cleric{" +
                 "name='" + name + '\'' +
-                ", hitPoints=" + hitPoints +
+                ", hitPoints=" + maxHitPoints +
                 ", strength=" + attack +
                 ", defense=" + defense +
                 ", skillList=" + skillList +
