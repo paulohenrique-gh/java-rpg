@@ -6,12 +6,12 @@ import models.base.Character;
 public class Warrior extends Character {
     public Warrior() {
         super();
-        this.hitPoints = 100;
-        this.attack = 9;
-        this.defense = 8;
-        this.resFire = 5;
-        this.resIce = 4;
-        this.resThunder = 5;
+        this.setHitPoints(100);
+        this.setAttack(9);
+        this.setDefense(5);
+        this.setResFire(5);
+        this.setResIce(4);
+        this.setResThunder(5);
         this.setSkills();
     }
 

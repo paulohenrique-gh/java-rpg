@@ -1,24 +1,11 @@
 package models.enemies;
 
-import models.base.RegularMob;
+import models.base.Boss;
 
-public class Goblin extends RegularMob {
-    public Goblin() {
-        super();
-        this.setName("Goblin");
-        this.setHitPoints(30);
-        this.setAttack(6);
-        this.setDefense(4);
-        this.setResFire(1);
-        this.setResIce(3);
-        this.setResThunder(3);
-        this.setType("Regular Mob");
-        this.setExp(20);
-    }
-
+public class Dragon extends Boss {
     @Override
     public String toString() {
-        return "Goblin{" +
+        return "Dragon{" +
                 "name='" + name + '\'' +
                 ", hitPoints=" + hitPoints +
                 ", strength=" + attack +

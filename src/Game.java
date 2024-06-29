@@ -48,12 +48,12 @@ public class Game {
             battle.start(this.ui);
             Character winner = battle.getWinner();
 
-            if (winner != this.getPlayerCharacter()) {
+            if (winner == enemy) {
                 System.out.println("Você perdeu!");
                 break;
+            } else if (winner == this.getPlayerCharacter()) {
+                System.out.println("Você venceu essa batalha");
             }
-
-            System.out.println("Você venceu essa batalha");
         }
 
         System.out.println("fim do jogo");

@@ -1,3 +1,4 @@
+import models.actions.EscapeAction;
 import models.base.BattleAction;
 import models.base.Character;
 import models.base.Enemy;
@@ -49,11 +50,15 @@ public class Battle {
 
         Character winner = null;
 
-        BattleAction action = ui.chooseAction();
-
         while (winner == null) {
+            BattleAction action = ui.chooseAction();
+
             Character character1 = this.turnOrder.get(0);
             Character character2 = this.turnOrder.get(1);
+            character1.setCurrentAction(action);
+            character2.setCurrentAction(action);
+
+            if (action instanceof EscapeAction) break;
 
             startTurn(character1, character2);
 
@@ -68,8 +73,8 @@ public class Battle {
         this.setWinner(winner);
     }
 
-    private void startTurn(Character activeCharacter, Character targetCharacter, String action) {
-        activeCharacter.attack(targetCharacter);
+    private void startTurn(Character activeCharacter, Character targetCharacter) {
+        activeCharacter.performAction(targetCharacter);
     }
 
 
