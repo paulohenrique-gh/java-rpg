@@ -1,8 +1,40 @@
 package models.playerCharacters;
 
 import models.base.Character;
+import models.base.SkillAction;
+import models.skills.Heal;
 
 public class Mage extends Character {
+    private int intelligence;
+
+    public Mage() {
+        super();
+        this.setMaxHitPoints(100);
+        this.setCurHitPoints(100);
+        this.setMaxMagicPoints(70);
+        this.setCurMagicPoints(70);
+        this.setAttack(9);
+        this.setDefense(5);
+        this.setResFire(5);
+        this.setResIce(4);
+        this.setResThunder(5);
+        this.setSkills();
+        this.setIntelligence(9);
+    }
+
+    private void setSkills() {
+//        SkillAction heal = new Heal("Heal", 50);
+//        SkillAction divineLight = new
+    }
+
+    public int getIntelligence() {
+        return intelligence;
+    }
+
+    public void setIntelligence(int intelligence) {
+        this.intelligence = intelligence;
+    }
+
     public static String getClassDescription() {
         return "Um sábio capaz de conjurar as forças da natureza";
     }

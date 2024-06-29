@@ -7,6 +7,8 @@ public class Character {
     protected String name;
     protected int maxHitPoints;
     protected int curHitPoints;
+    protected int maxMagicPoints;
+    protected int curMagicPoints;
     protected int attack;
     protected int defense;
     protected List<SkillAction> skillList;
@@ -44,6 +46,25 @@ public class Character {
 
         if (this.curHitPoints > this.maxHitPoints) this.curHitPoints = this.maxHitPoints;
         if (this.curHitPoints < 0) this.curHitPoints = 0;
+    }
+
+    public int getMaxMagicPoints() {
+        return maxMagicPoints;
+    }
+
+    public void setMaxMagicPoints(int maxMagicPoints) {
+        this.maxMagicPoints = maxMagicPoints;
+    }
+
+    public int getCurMagicPoints() {
+        return curMagicPoints;
+    }
+
+    public void setCurMagicPoints(int curMagicPoints) {
+        this.curMagicPoints = curMagicPoints;
+
+        if (this.curMagicPoints > this.maxMagicPoints) this.curMagicPoints = this.maxMagicPoints;
+        if (this.curMagicPoints < 0) this.curMagicPoints = 0;
     }
 
     public void setSkillList(List<SkillAction> skillList) {
@@ -104,6 +125,11 @@ public class Character {
 
     public List<SkillAction> getSkillList() {
         return this.skillList;
+    }
+
+    private int calculateDamage() {
+        // TODO
+        return 0;
     }
 
     public void performAction(Character targetCharacter) {

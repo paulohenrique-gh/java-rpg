@@ -2,13 +2,15 @@ package models.playerCharacters;
 
 import models.base.SkillAction;
 import models.base.Character;
-import models.skills.WeakHeal;
+import models.skills.Heal;
 
 public class Warrior extends Character {
     public Warrior() {
         super();
         this.setMaxHitPoints(100);
         this.setCurHitPoints(100);
+        this.setMaxMagicPoints(30);
+        this.setCurMagicPoints(30);
         this.setAttack(9);
         this.setDefense(5);
         this.setResFire(5);
@@ -18,9 +20,9 @@ public class Warrior extends Character {
     }
 
     private void setSkills() {
-        SkillAction curaFraca = new WeakHeal();
+        SkillAction weakHeal = new Heal("Cura Fraca", 20, 5);
 
-        this.addSkill(curaFraca);
+        this.addSkill(weakHeal);
     }
 
     public static String getClassDescription() {

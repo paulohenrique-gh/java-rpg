@@ -106,7 +106,7 @@ public class UserInterface {
 
             try {
                 int option = Integer.parseInt(chosenOption);
-                if (option <= 1 && option <= skills.size()) {
+                if (option >= 1 && option <= skills.size()) {
                     skill = skills.get(option - 1);
                 } else {
                     System.out.println("Opção inválida");

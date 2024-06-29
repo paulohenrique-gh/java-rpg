@@ -4,16 +4,18 @@ import models.base.BattleAction;
 import models.base.Character;
 
 public class AttackAction extends BattleAction {
-
     @Override
     public void perform(Character activeCharacter, Character targetCharacter) {
         int prevHp = targetCharacter.getCurHitPoints();
         targetCharacter.setCurHitPoints(prevHp + targetCharacter.getDefense() - activeCharacter.getAttack());
-        this.resetNegativeHp(targetCharacter);
-        this.logAction(activeCharacter.getName(), targetCharacter.getName(), prevHp, targetCharacter.getCurHitPoints());
+        this.logAction(activeCharacter, targetCharacter, prevHp);
     }
 
-    private void logAction(String activeName, String targetName, int prevHp, int curHp) {
+    private void logAction(Character activeCharacter, Character targetCharacter, int prevHp) {
+        String activeName = activeCharacter.getName();
+        String targetName = targetCharacter.getName();
+        int curHp = targetCharacter.getCurHitPoints();
+
         System.out.println("================================================");
         System.out.println(activeName + " atacou " + targetName);
         System.out.println(activeName + " causou " + (prevHp - curHp) + " de dano");
