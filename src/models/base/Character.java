@@ -81,5 +81,6 @@ public class Character {
 
     public void attack(Character target) {
         target.setHitPoints(target.getHitPoints() - this.getAttack());
+        System.out.println(this.getName() + " attacked " + target.getName());
     }
 }

@@ -49,23 +49,35 @@ public class Battle {
         Character winner = null;
 
         while (winner == null) {
-            for (int i = 0; i < this.turnOrder.size(); i++) {
-                Character activeCharacter = this.turnOrder.get(i);
-                Character targetCharacter = this.turnOrder.get(i + 1);
+            Character character1 = this.turnOrder.get(0);
+            Character character2 = this.turnOrder.get(1);
 
-                activeCharacter.attack(targetCharacter);
+            startTurn(character1, character2);
 
-                if (this.getPlayerCharacter().getHitPoints() <= 0) {
-                    System.out.println("game over");
-                    winner = this.getEnemy();
-                }
-                if (this.getEnemy().getHitPoints() <= 0) {
-                    System.out.println("fim da batalha");
-                    winner = this.getPlayerCharacter();
-                }
-            }
+            winner = this.validateWinner(character1, character2);
+            if (winner != null) break;
+
+            startTurn(character2, character1);
+
+            winner = this.validateWinner(character2, character1);
         }
 
         this.setWinner(winner);
+    }
+
+    private void startTurn(Character activeCharacter, Character targetCharacter) {
+        activeCharacter.attack(targetCharacter);
+    }
+
+
+    private Character validateWinner(Character activeCharacter, Character targetCharacter) {
+        if (activeCharacter.getHitPoints() <= 0) {
+            return targetCharacter;
+        }
+        if (targetCharacter.getHitPoints() <= 0) {
+            return activeCharacter;
+        }
+
+        return null;
     }
 }

@@ -13,6 +13,7 @@ import models.playerCharacters.Warrior;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -57,6 +58,7 @@ public class UserInterface {
             this.chooseName();
             this.game.setPlayerCharacter(playerCharacter);
             this.setGameEnemies();
+            this.game.start();
 
             break;
         }
@@ -70,10 +72,11 @@ public class UserInterface {
 
     public void setGameEnemies() {
         RegularMob enemy1 = new Goblin();
-        RegularMob enemy2 = new Skeleton();
-        RegularMob enemy3 = new Troll();
-        Boss boss = new Dragon();
+//        RegularMob enemy2 = new Skeleton();
+//        RegularMob enemy3 = new Troll();
+//        Boss boss = new Dragon();
 
-        this.game.setEnemies(new ArrayList<Enemy>(Arrays.asList(enemy1, enemy2, enemy3, boss)));
+//        this.game.setEnemies(new ArrayList<Enemy>(Arrays.asList(enemy1, enemy2, enemy3, boss)));
+        this.game.setEnemies(new ArrayList<Enemy>(List.of(enemy1)));
     }
 }
