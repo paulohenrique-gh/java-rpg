@@ -4,12 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="WIP: Main menu">
-      <change afterPath="$PROJECT_DIR$/src/Skill.java" afterDir="false" />
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Set warrior base stats">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Battle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/base/Boss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/base/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/base/RegularMob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/enemies/Goblin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/enemies/Skeleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/enemies/Troll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Archer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/base/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cleric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Cleric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Skill.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Warrior.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +52,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -48,12 +61,15 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "D:/Java/t-ready/TrabalhoRPGdeTurno/src/Main.java",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "com.maddyhome.idea.vim.ui.VimEmulationConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
+      <recent name="models" />
     </key>
   </component>
   <component name="RunManager">
@@ -87,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719618041760</updated>
       <workItem from="1719618042829" duration="3177000" />
-      <workItem from="1719660575202" duration="7480000" />
+      <workItem from="1719660575202" duration="11071000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -113,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719667142213</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Set warrior base stats">
+      <option name="closed" value="true" />
+      <created>1719669584181</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719669584181</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +157,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="WIP: Main menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP: Main menu" />
+    <MESSAGE value="Set warrior base stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set warrior base stats" />
   </component>
 </project>

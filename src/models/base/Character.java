@@ -1,10 +1,14 @@
+package models.base;
+
+import models.Skill;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Character {
     protected String name;
     protected int hitPoints;
-    protected int strength;
+    protected int attack;
     protected int defense;
     protected List<Skill> skillList;
     protected int resFire;
@@ -31,12 +35,12 @@ public class Character {
         this.hitPoints = hitPoints;
     }
 
-    public int getStrength() {
-        return strength;
+    public int getAttack() {
+        return attack;
     }
 
-    public void setStrength(int strength) {
-        this.strength = strength;
+    public void setAttack(int attack) {
+        this.attack = attack;
     }
 
     public int getDefense() {
@@ -73,5 +77,9 @@ public class Character {
 
     public void addSkill(Skill skill) {
         this.skillList.add(skill);
+    }
+
+    public void attack(Character target) {
+        target.setHitPoints(target.getHitPoints() - this.getAttack());
     }
 }

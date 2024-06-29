@@ -1,12 +1,12 @@
+package models;
+
 public class Skill {
     private String name;
-    private String description;
     private String type;
     private int baseDamage;
 
-    public Skill(String name, String description, String type, int baseDamage) {
+    public Skill(String name, String type, int baseDamage) {
         this.name = name;
-        this.description = description;
         this.type = type;
         this.baseDamage = baseDamage;
     }
@@ -19,14 +19,6 @@ public class Skill {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getType() {
