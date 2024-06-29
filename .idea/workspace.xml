@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Set warrior base stats">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Battle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/base/Boss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/base/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/base/RegularMob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/enemies/Goblin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/enemies/Skeleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/enemies/Troll.java" afterDir="false" />
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Set warrior base skill&#10;&#10;-WIP: set turn order for battles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Archer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/base/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cleric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Cleric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Skill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Battle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719618041760</updated>
       <workItem from="1719618042829" duration="3177000" />
-      <workItem from="1719660575202" duration="11071000" />
+      <workItem from="1719660575202" duration="12084000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -137,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719669584181</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Set warrior base skill&#10;&#10;-WIP: set turn order for battles">
+      <option name="closed" value="true" />
+      <created>1719673221665</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719673221665</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +151,7 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="WIP: Main menu" />
     <MESSAGE value="Set warrior base stats" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set warrior base stats" />
+    <MESSAGE value="Set warrior base skill&#10;&#10;-WIP: set turn order for battles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set warrior base skill&#10;&#10;-WIP: set turn order for battles" />
   </component>
 </project>
