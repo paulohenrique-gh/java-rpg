@@ -1,25 +1,17 @@
-import models.base.Boss;
+import models.actions.AttackAction;
+import models.actions.EscapeAction;
+import models.base.BattleAction;
 import models.base.Character;
-import models.base.Enemy;
-import models.base.RegularMob;
-import models.enemies.Dragon;
-import models.enemies.Goblin;
-import models.enemies.Skeleton;
-import models.enemies.Troll;
 import models.playerCharacters.Archer;
 import models.playerCharacters.Cleric;
 import models.playerCharacters.Mage;
 import models.playerCharacters.Warrior;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
     Scanner scanner = new Scanner(System.in);
-    Character playerCharacter;
-    Game game = new Game();
+    Character selectedCharacter;
 
     public void mainMenu() {
         System.out.println("Bem-vindo ao Jogo!");
@@ -38,16 +30,16 @@ public class UserInterface {
 
             switch (chosenOption) {
                 case "1":
-                    playerCharacter = new Warrior();
+                    selectedCharacter = new Warrior();
                     break;
                 case "2":
-                    playerCharacter = new Mage();
+                    selectedCharacter = new Mage();
                     break;
                 case "3":
-                    playerCharacter = new Cleric();
+                    selectedCharacter = new Cleric();
                     break;
                 case "4":
-                    playerCharacter = new Archer();
+                    selectedCharacter = new Archer();
                     break;
                 default: {
                     System.out.println("Opção inválida\n");
@@ -56,9 +48,6 @@ public class UserInterface {
             }
 
             this.chooseName();
-            this.game.setPlayerCharacter(playerCharacter);
-            this.setGameEnemies();
-            this.game.start();
 
             break;
         }
@@ -67,16 +56,36 @@ public class UserInterface {
     public void chooseName() {
         System.out.println("Digite um nome para o seu personagem: ");
         String name = scanner.nextLine();
-        playerCharacter.setName(name);
+        this.selectedCharacter.setName(name);
     }
 
-    public void setGameEnemies() {
-        RegularMob enemy1 = new Goblin();
-//        RegularMob enemy2 = new Skeleton();
-//        RegularMob enemy3 = new Troll();
-//        Boss boss = new Dragon();
+    public BattleAction chooseAction() {
+        BattleAction action = null;
 
-//        this.game.setEnemies(new ArrayList<Enemy>(Arrays.asList(enemy1, enemy2, enemy3, boss)));
-        this.game.setEnemies(new ArrayList<Enemy>(List.of(enemy1)));
+        while (action == null) {
+            System.out.println("Escolha uma opção:\n");
+            System.out.println("1 - Atacar\n");
+            System.out.println("2 - Fugir\n");
+
+            String chosenOption = scanner.nextLine();
+
+            switch(chosenOption) {
+                case "1":
+                    action = new AttackAction();
+                    break;
+                case "2":
+                    action = new EscapeAction();
+                    break;
+                default:
+                    System.out.println("Opção inválida");;
+            };
+        }
+
+        return action;
     }
+
+    public Character getSelectedCharacter() {
+        return this.selectedCharacter;
+    }
+
 }

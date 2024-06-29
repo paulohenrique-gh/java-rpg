@@ -14,6 +14,7 @@ public class Character {
     protected int resFire;
     protected int resIce;
     protected int resThunder;
+    protected BattleAction currentAction;
 
     public Character() {
         this.skillList = new ArrayList<Skill>();
@@ -73,6 +74,18 @@ public class Character {
 
     public void setResThunder(int resThunder) {
         this.resThunder = resThunder;
+    }
+
+    public BattleAction getCurrentAction() {
+        return currentAction;
+    }
+
+    public void setCurrentAction(BattleAction currentAction) {
+        this.currentAction = currentAction;
+    }
+
+    public void performAction(Character targetCharacter) {
+        this.currentAction.perform(this, targetCharacter);
     }
 
     public void addSkill(Skill skill) {

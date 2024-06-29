@@ -1,3 +1,4 @@
+import models.base.BattleAction;
 import models.base.Character;
 import models.base.Enemy;
 
@@ -43,10 +44,12 @@ public class Battle {
         Collections.shuffle(this.turnOrder);
     }
 
-    public void start() {
+    public void start(UserInterface ui) {
         generateTurnOrder();
 
         Character winner = null;
+
+        BattleAction action = ui.chooseAction();
 
         while (winner == null) {
             Character character1 = this.turnOrder.get(0);
@@ -65,7 +68,7 @@ public class Battle {
         this.setWinner(winner);
     }
 
-    private void startTurn(Character activeCharacter, Character targetCharacter) {
+    private void startTurn(Character activeCharacter, Character targetCharacter, String action) {
         activeCharacter.attack(targetCharacter);
     }
 
