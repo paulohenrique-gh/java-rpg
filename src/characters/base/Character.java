@@ -3,8 +3,7 @@ package characters.base;
 import actions.base.BattleAction;
 import actions.base.SkillAction;
 import items.base.Item;
-import jdk.jshell.Snippet;
-import statusEffects.Poison;
+import statusEffects.base.StatusEffect;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +24,7 @@ public class Character {
     protected int resLight;
     protected BattleAction currentAction;
     protected double damageModifier;
-    protected Poison currentStatus;
+    protected StatusEffect currentStatus;
 
     public Character() {
         this.skillList = new ArrayList<>();
@@ -163,11 +162,11 @@ public class Character {
         this.damageModifier = damageModifier;
     }
 
-    public Poison getCurrentStatus() {
+    public StatusEffect getCurrentStatus() {
         return currentStatus;
     }
 
-    public void setCurrentStatus(Poison currentStatus) {
+    public void setCurrentStatus(StatusEffect currentStatus) {
         this.currentStatus = currentStatus;
     }
 

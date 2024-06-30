@@ -1,14 +1,14 @@
 package items.base;
 
-import statusEffects.Poison;
+import statusEffects.base.StatusEffect;
 
 public class Item {
     private String name;
     private int baseDamage;
     private String description;
-    private Poison statusEffect;
+    private StatusEffect statusEffect;
 
-    public Item(String name, int baseDamage, String description, Poison effect) {
+    public Item(String name, int baseDamage, String description, StatusEffect effect) {
         this.name = name;
         this.baseDamage = baseDamage;
         this.description = description;
@@ -39,11 +39,11 @@ public class Item {
         this.description = description;
     }
 
-    public Poison getStatusEffect() {
+    public StatusEffect getStatusEffect() {
         return this.statusEffect;
     }
 
-    public void setStatusEffect(Poison effect) {
+    public void setStatusEffect(StatusEffect effect) {
         this.statusEffect = effect;
     }
 }

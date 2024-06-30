@@ -1,53 +1,56 @@
 package statusEffects;
 
 import characters.base.Character;
+import controllers.Battle;
+import statusEffects.base.StatusEffect;
 
-public class Poison {
-    private String name;
-    private int tickDamage;
-    private int remainingActiveTurns;
+public class Poison extends StatusEffect {
+    private int remainingActiveRounds;
+    private int lastActiveRound;
 
     public Poison() {
-        this.name = "Veneno";
-        this.tickDamage = 2;
-        this.remainingActiveTurns = 3;
+        super("Veneno", 2);
+        this.remainingActiveRounds = 3;
+        this.lastActiveRound = 0;
     }
 
-    public String getName() {
-        return name;
+    public int getRemainingActiveRounds() {
+        return remainingActiveRounds;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRemainingActiveRounds(int remainingActiveRounds) {
+        this.remainingActiveRounds = remainingActiveRounds;
     }
 
-    public int getTickDamage() {
-        return tickDamage;
+    public int getLastActiveRound() {
+        return lastActiveRound;
     }
 
-    public void setTickDamage(int tickDamage) {
-        this.tickDamage = tickDamage;
+    public void setLastActiveRound(int lastActiveRound) {
+        this.lastActiveRound = lastActiveRound;
     }
 
-    public int getRemainingActiveTurns() {
-        return remainingActiveTurns;
+    private boolean isSameRound() {
+        return this.getLastActiveRound() == Battle.getCurrentRound();
     }
 
-    public void setRemainingActiveTurns(int remainingActiveTurns) {
-        this.remainingActiveTurns = remainingActiveTurns;
+    private boolean isRemainingRoundsEmpty() {
+        return this.getRemainingActiveRounds() == 0;
     }
 
+    @Override
     public void tick(Character targetCharacter) {
-        if (this.getRemainingActiveTurns() <= 0) return;
+        if (this.isRemainingRoundsEmpty() || this.isSameRound()) return;
 
         int prevHp = targetCharacter.getCurHitPoints();
-        targetCharacter.setCurHitPoints(targetCharacter.getCurHitPoints() - this.tickDamage);
-        this.setRemainingActiveTurns(this.remainingActiveTurns - 1);
-        if (this.getRemainingActiveTurns() <= 0) this.cleanEffect(targetCharacter);
-        this.logTickDamage(targetCharacter, prevHp);
+        targetCharacter.setCurHitPoints(prevHp - this.tickDamage);
+        this.setRemainingActiveRounds(this.remainingActiveRounds - 1);
+        if (this.getRemainingActiveRounds() <= 0) this.cleanEffect(targetCharacter);
+        this.setLastActiveRound(Battle.getCurrentRound());
+        this.logTickDamage(targetCharacter);
     }
 
-    private void logTickDamage(Character targetCharacter, int prevHp) {
+    private void logTickDamage(Character targetCharacter) {
         String targetName = targetCharacter.getName();
         int curHp = targetCharacter.getCurHitPoints();
 

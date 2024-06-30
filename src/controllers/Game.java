@@ -1,3 +1,5 @@
+package controllers;
+
 import characters.base.Character;
 import characters.base.Enemy;
 import characters.enemies.Goblin;

@@ -1,3 +1,5 @@
+package controllers;
+
 import actions.AttackAction;
 import actions.EscapeAction;
 import actions.base.BattleAction;
@@ -19,7 +21,6 @@ public class UserInterface {
 
     public void mainMenu() {
         System.out.println("Bem-vindo ao Jogo!");
-
 
         while (true) {
             String classOptions = "Escolha uma classe: \n" +
