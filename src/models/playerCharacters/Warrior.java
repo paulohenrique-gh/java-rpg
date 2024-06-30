@@ -35,6 +35,8 @@ public class Warrior extends Character {
                 "name='" + name + '\'' +
                 ", maxHitPoints=" + maxHitPoints +
                 ", curHitPoints=" + curHitPoints +
+                ", maxMagicPoints=" + maxMagicPoints +
+                ", curMagicPoints=" + curMagicPoints +
                 ", attack=" + attack +
                 ", defense=" + defense +
                 ", skillList=" + skillList +

@@ -3,7 +3,8 @@ package models.playerCharacters;
 import models.base.Character;
 import models.base.SkillAction;
 import models.skills.Heal;
-import models.skills.Spell;
+import models.skills.LightSpell;
+import models.skills.base.Spell;
 
 public class Cleric extends Character {
     private int faith;
@@ -25,7 +26,7 @@ public class Cleric extends Character {
 
     private void setSkills() {
         SkillAction heal = new Heal("Heal", 50, 10);
-        SkillAction divineLight = new Spell("Divine Light", 10, 15);
+        SkillAction divineLight = new LightSpell("Divine Light", 10, 15);
 
         this.addSkill(heal);
         this.addSkill(divineLight);
@@ -46,14 +47,19 @@ public class Cleric extends Character {
     @Override
     public String toString() {
         return "Cleric{" +
-                "name='" + name + '\'' +
-                ", hitPoints=" + maxHitPoints +
-                ", strength=" + attack +
+                "faith=" + faith +
+                ", name='" + name + '\'' +
+                ", maxHitPoints=" + maxHitPoints +
+                ", curHitPoints=" + curHitPoints +
+                ", maxMagicPoints=" + maxMagicPoints +
+                ", curMagicPoints=" + curMagicPoints +
+                ", attack=" + attack +
                 ", defense=" + defense +
                 ", skillList=" + skillList +
                 ", resFire=" + resFire +
                 ", resIce=" + resIce +
                 ", resThunder=" + resThunder +
+                ", currentAction=" + currentAction +
                 '}';
     }
 }

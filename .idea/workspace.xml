@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Fix bug in damage/healing calculation">
-      <change afterPath="$PROJECT_DIR$/src/models/skills/Spell.java" afterDir="false" />
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="WIP: refactor action classes">
+      <change afterPath="$PROJECT_DIR$/src/models/skills/FireSpell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/skills/IceSpell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/skills/LightSpell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/skills/ThunderSpell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/skills/base/Spell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/actions/AttackAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/actions/AttackAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/base/BattleAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/base/BattleAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/base/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/base/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/base/SkillAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/base/SkillAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/playerCharacters/Cleric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Cleric.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/playerCharacters/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/playerCharacters/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/skills/WeakHeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/skills/Heal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/Heal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/skills/Heal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/Spell.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -98,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719618041760</updated>
       <workItem from="1719618042829" duration="3177000" />
-      <workItem from="1719660575202" duration="38724000" />
+      <workItem from="1719660575202" duration="42662000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -196,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719695751417</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="WIP: refactor action classes">
+      <option name="closed" value="true" />
+      <created>1719704059321</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1719704059321</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,17 +237,7 @@
     <MESSAGE value="Implement action according to user selection" />
     <MESSAGE value="Set base monsters stats" />
     <MESSAGE value="Fix bug in damage/healing calculation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix bug in damage/healing calculation" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UserInterface.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="WIP: refactor action classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP: refactor action classes" />
   </component>
 </project>

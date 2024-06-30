@@ -2,7 +2,6 @@ package models.skills;
 
 import models.base.Character;
 import models.base.SkillAction;
-import models.enemies.Skeleton;
 
 public class Heal extends SkillAction {
     private int mpCost;
@@ -31,11 +30,6 @@ public class Heal extends SkillAction {
         }
 
         int damage = this.getBaseDamage();
-        if (targetCharacter instanceof Skeleton) {
-            damage = -damage;
-        } else {
-            targetCharacter = activeCharacter;
-        }
         int prevHp = targetCharacter.getCurHitPoints();
         int prevMp = activeCharacter.getCurMagicPoints();
         targetCharacter.setCurHitPoints(prevHp + damage);
@@ -47,13 +41,12 @@ public class Heal extends SkillAction {
     @Override
     protected void logSkillUsage(Character activeCharacter, Character targetCharacter, int prevHp, int prevMp) {
         String activeName = activeCharacter.getName();
-        String targetName = targetCharacter.getName();
-        int curHp = targetCharacter.getCurHitPoints();
-        int curMp = targetCharacter.getCurMagicPoints();
+        int curHp = activeCharacter.getCurHitPoints();
+        int curMp = activeCharacter.getCurMagicPoints();
 
         System.out.println("================================================");
         System.out.println(activeName + " usou " + this.getName() + " em si mesmo");
-        System.out.println(activeName + " recuperou " + Math.abs(prevHp - curHp) + " pontos de vida");
+        System.out.println(activeName + " recuperou " + (curHp - prevHp) + " pontos de vida");
         System.out.println(activeName + " tem " + curHp + " pontos de vida");
         System.out.println(activeName + " tem " + curMp + " pontos de magia");
         System.out.println("================================================");

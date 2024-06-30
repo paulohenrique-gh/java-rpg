@@ -1,8 +1,6 @@
 package models.playerCharacters;
 
 import models.base.Character;
-import models.base.SkillAction;
-import models.skills.Heal;
 
 public class Mage extends Character {
     private int intelligence;
@@ -23,8 +21,7 @@ public class Mage extends Character {
     }
 
     private void setSkills() {
-//        SkillAction heal = new Heal("Heal", 50);
-//        SkillAction divineLight = new
+//        SkillAction fire = new Spell()
     }
 
     public int getIntelligence() {

@@ -1,5 +1,7 @@
 package models.base;
 
+import models.skills.base.Spell;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,10 +17,13 @@ public class Character {
     protected int resFire;
     protected int resIce;
     protected int resThunder;
+    protected int resLight;
     protected BattleAction currentAction;
+    protected double damageModifier;
 
     public Character() {
         this.skillList = new ArrayList<SkillAction>();
+        this.damageModifier = 1.0;
     }
 
     public String getName() {
@@ -111,6 +116,14 @@ public class Character {
         this.resThunder = resThunder;
     }
 
+    public int getResLight() {
+        return resLight;
+    }
+
+    public void setResLight(int resLight) {
+        this.resLight = resLight;
+    }
+
     public BattleAction getCurrentAction() {
         return currentAction;
     }
@@ -123,12 +136,29 @@ public class Character {
         this.skillList.add(skill);
     }
 
+    public double getDamageModifier() {
+        return damageModifier;
+    }
+
+    public void setDamageModifier(double damageModifier) {
+        this.damageModifier = damageModifier;
+    }
+
     public List<SkillAction> getSkillList() {
         return this.skillList;
     }
 
-    private int calculateDamage() {
+    private int calculateAttackDamage(Character targetCharacter) {
+        int damage = this.getAttack() - targetCharacter.getDefense();
+
+        if (damage < 0) damage = 0;
+
+        return (int) (damage * this.getDamageModifier());
+    }
+
+    private int calculateElementalDamage(Character targetCharacter, Spell spell) {
         // TODO
+        int damage = spell.getBaseDamage() - targetCharacter.getDefense();
         return 0;
     }
 
