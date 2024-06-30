@@ -3,6 +3,8 @@ package characters.playerCharacters;
 import characters.base.Character;
 import actions.base.SkillAction;
 import actions.skills.PhysicalSkill;
+import items.base.Item;
+import statusEffects.Poison;
 
 public class Archer extends Character {
     private int dexterity;
@@ -20,6 +22,7 @@ public class Archer extends Character {
         this.setResThunder(5);
         this.setSkills();
         this.setDexterity(9);
+        this.setItems();
     }
 
     public int getDexterity() {
@@ -36,6 +39,12 @@ public class Archer extends Character {
 
         this.addSkill(arrows);
         this.addSkill(tripleAttack);
+    }
+
+    private void setItems() {
+        Item poisonBomb = new Item("Bomba de Veneno", 0, "Causa dano no alvo a cada rodada", new Poison());
+
+        this.addItem(poisonBomb);
     }
 
     public static String getClassDescription() {

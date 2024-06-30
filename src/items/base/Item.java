@@ -39,11 +39,11 @@ public class Item {
         this.description = description;
     }
 
-    public Poison getEffect() {
+    public Poison getStatusEffect() {
         return this.statusEffect;
     }
 
-    public void setEffect(Poison effect) {
+    public void setStatusEffect(Poison effect) {
         this.statusEffect = effect;
     }
 }

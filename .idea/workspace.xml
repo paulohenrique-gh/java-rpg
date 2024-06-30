@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Remove redundant classes Boss and RegularMob">
-      <change afterPath="$PROJECT_DIR$/src/actions/base/ItemAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/items/base/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/statusEffects/Poison.java" afterDir="false" />
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="WIP: Poison tick damage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/base/ItemAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/base/ItemAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/base/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/base/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/base/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/base/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/statusEffects/Poison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statusEffects/Poison.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +106,7 @@
       <workItem from="1719711630406" duration="803000" />
       <workItem from="1719750427815" duration="5476000" />
       <workItem from="1719755961303" duration="121000" />
-      <workItem from="1719756091194" duration="1746000" />
+      <workItem from="1719756091194" duration="3290000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -253,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719752314059</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="WIP: Poison tick damage">
+      <option name="closed" value="true" />
+      <created>1719757869050</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1719757869050</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,15 +295,16 @@
     <MESSAGE value="Add spells for remaining classes" />
     <MESSAGE value="Update toString in character classes" />
     <MESSAGE value="Remove redundant classes Boss and RegularMob" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove redundant classes Boss and RegularMob" />
+    <MESSAGE value="WIP: Poison tick damage" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP: Poison tick damage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UserInterface.java</url>
-          <line>85</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/Battle.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

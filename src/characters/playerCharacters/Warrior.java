@@ -29,9 +29,7 @@ public class Warrior extends Character {
     }
 
     private void setItems() {
-        Item poisonBomb = new Item("Bomba de Veneno", 0, "Causa dano no alvo a cada rodada", new Poison());
 
-        this.addItem(poisonBomb);
     }
 
     public static String getClassDescription() {

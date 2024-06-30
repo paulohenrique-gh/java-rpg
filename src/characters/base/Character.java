@@ -184,6 +184,8 @@ public class Character {
     }
 
     public void statusRoundTickDamage() {
+        if (this.currentStatus == null) return;
+
         this.currentStatus.tick(this);
     }
 }

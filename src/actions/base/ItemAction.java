@@ -13,16 +13,17 @@ public class ItemAction extends BattleAction {
 
     @Override
     public void perform(Character activeCharacter, Character targetCharacter) {
-        targetCharacter.setCurrentStatus(this.item.getEffect());
+        targetCharacter.setCurrentStatus(this.item.getStatusEffect());
         this.logItemUsage(activeCharacter, targetCharacter);
     }
 
     private void logItemUsage(Character activeCharacter, Character targetCharacter) {
         String activeName = activeCharacter.getName();
         String targetName = targetCharacter.getName();
+        String statusName = this.item.getStatusEffect().getName();
 
         System.out.println("================================================");
-        System.out.println(activeName + " usou " + this.item.getName() + " e causou " + this.item.getEffect() + " em " + targetName);
+        System.out.println(activeName + " usou " + this.item.getName() + " e causou " + statusName + " em " + targetName);
         System.out.println("================================================");
     }
 }
