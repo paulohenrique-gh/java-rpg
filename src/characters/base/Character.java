@@ -2,6 +2,9 @@ package characters.base;
 
 import actions.base.BattleAction;
 import actions.base.SkillAction;
+import items.base.Item;
+import jdk.jshell.Snippet;
+import statusEffects.Poison;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,15 +18,18 @@ public class Character {
     protected int attack;
     protected int defense;
     protected List<SkillAction> skillList;
+    protected List<Item> itemList;
     protected int resFire;
     protected int resIce;
     protected int resThunder;
     protected int resLight;
     protected BattleAction currentAction;
     protected double damageModifier;
+    protected Poison currentStatus;
 
     public Character() {
         this.skillList = new ArrayList<>();
+        this.itemList = new ArrayList<>();
         this.damageModifier = 1.0;
     }
 
@@ -137,6 +143,18 @@ public class Character {
         this.skillList.add(skill);
     }
 
+    public List<SkillAction> getSkillList() {
+        return this.skillList;
+    }
+
+    public void addItem(Item item) {
+        this.itemList.add(item);
+    }
+
+    public List<Item> getItemList() {
+        return this.itemList;
+    }
+
     public double getDamageModifier() {
         return damageModifier;
     }
@@ -145,8 +163,12 @@ public class Character {
         this.damageModifier = damageModifier;
     }
 
-    public List<SkillAction> getSkillList() {
-        return this.skillList;
+    public Poison getCurrentStatus() {
+        return currentStatus;
+    }
+
+    public void setCurrentStatus(Poison currentStatus) {
+        this.currentStatus = currentStatus;
     }
 
     private int calculateAttackDamage(Character targetCharacter) {
@@ -159,5 +181,9 @@ public class Character {
 
     public void performAction(Character targetCharacter) {
         this.currentAction.perform(this, targetCharacter);
+    }
+
+    public void statusRoundTickDamage() {
+        this.currentStatus.tick(this);
     }
 }

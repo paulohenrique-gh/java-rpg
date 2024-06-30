@@ -1,12 +1,14 @@
 import actions.AttackAction;
 import actions.EscapeAction;
 import actions.base.BattleAction;
+import actions.base.ItemAction;
 import characters.base.Character;
 import actions.base.SkillAction;
 import characters.playerCharacters.Archer;
 import characters.playerCharacters.Cleric;
 import characters.playerCharacters.Mage;
 import characters.playerCharacters.Warrior;
+import items.base.Item;
 
 import java.util.List;
 import java.util.Scanner;
@@ -68,7 +70,8 @@ public class UserInterface {
             System.out.println("Escolha uma opção:\n");
             System.out.println("1 - Atacar");
             System.out.println("2 - Usar habilidade");
-            System.out.println("3 - Fugir");
+            System.out.println("3 - Usar item");
+            System.out.println("4 - Fugir");
 
             String chosenOption = scanner.nextLine();
 
@@ -80,6 +83,13 @@ public class UserInterface {
                     action = this.chooseSkill();
                     break;
                 case "3":
+                    if (this.selectedCharacter.getItemList().isEmpty()) {
+                        System.out.println(this.selectedCharacter.getName() + " não tem items");
+                        break;
+                    }
+                    action = this.chooseItem();
+                    break;
+                case "4":
                     action = new EscapeAction();
                     break;
                 default:
@@ -116,6 +126,33 @@ public class UserInterface {
         }
 
         return skill;
+    }
+
+    private ItemAction chooseItem() {
+        Item item = null;
+
+        while (item == null) {
+            System.out.println("Escolha um item:\n");
+            List<Item> items = this.selectedCharacter.getItemList();
+            for (int i = 0; i < items.size(); i++) {
+                System.out.println((i + 1) + " - " + items.get(i).getName());
+            }
+
+            String chosenOption = scanner.nextLine();
+
+            try {
+                int option = Integer.parseInt(chosenOption);
+                if (option >= 1 && option <= items.size()) {
+                    item = items.get(option - 1);
+                } else {
+                    System.out.println("Opção inválida");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Opção inválida");
+            }
+        }
+
+        return new ItemAction(item);
     }
 
     public Character getSelectedCharacter() {

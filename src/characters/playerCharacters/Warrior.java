@@ -3,6 +3,8 @@ package characters.playerCharacters;
 import actions.base.SkillAction;
 import characters.base.Character;
 import actions.skills.Heal;
+import items.base.Item;
+import statusEffects.Poison;
 
 public class Warrior extends Character {
     public Warrior() {
@@ -17,12 +19,19 @@ public class Warrior extends Character {
         this.setResIce(4);
         this.setResThunder(5);
         this.setSkills();
+        this.setItems();
     }
 
     private void setSkills() {
         SkillAction weakHeal = new Heal("Cura Fraca", 20, 5);
 
         this.addSkill(weakHeal);
+    }
+
+    private void setItems() {
+        Item poisonBomb = new Item("Bomba de Veneno", 0, "Causa dano no alvo a cada rodada", new Poison());
+
+        this.addItem(poisonBomb);
     }
 
     public static String getClassDescription() {

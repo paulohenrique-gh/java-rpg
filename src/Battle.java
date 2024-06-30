@@ -68,6 +68,8 @@ public class Battle {
             winner = this.validateWinner(character2, character1);
 
             if (action instanceof EscapeAction) break;
+
+            notifyFinishedRound(character1, character2);
         }
 
         this.setWinner(winner);
@@ -77,6 +79,10 @@ public class Battle {
         activeCharacter.performAction(targetCharacter);
     }
 
+    private void notifyFinishedRound(Character character1, Character character2) {
+        character1.statusRoundTickDamage();
+        character2.statusRoundTickDamage();
+    }
 
     private Character validateWinner(Character activeCharacter, Character targetCharacter) {
         if (activeCharacter.getCurHitPoints() <= 0) {
