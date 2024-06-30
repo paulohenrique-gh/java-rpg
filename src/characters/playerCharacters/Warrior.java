@@ -3,8 +3,8 @@ package characters.playerCharacters;
 import actions.base.SkillAction;
 import characters.base.Character;
 import actions.skills.Heal;
-import items.base.Item;
-import statusEffects.Poison;
+import items.Item;
+import statusEffects.Stun;
 
 public class Warrior extends Character {
     public Warrior() {
@@ -29,7 +29,9 @@ public class Warrior extends Character {
     }
 
     private void setItems() {
+        Item stunBomb = new Item("Bomba de Atordoamento", "Impede alvo de atacar no próximo turno", new Stun());
 
+        this.addItem(stunBomb);
     }
 
     public static String getClassDescription() {

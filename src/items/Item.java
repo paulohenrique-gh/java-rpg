@@ -1,4 +1,4 @@
-package items.base;
+package items;
 
 import statusEffects.base.StatusEffect;
 

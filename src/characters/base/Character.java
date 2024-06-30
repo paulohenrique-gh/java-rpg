@@ -2,7 +2,7 @@ package characters.base;
 
 import actions.base.BattleAction;
 import actions.base.SkillAction;
-import items.base.Item;
+import items.Item;
 import statusEffects.base.StatusEffect;
 
 import java.util.ArrayList;

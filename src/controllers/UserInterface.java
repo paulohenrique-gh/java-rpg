@@ -10,7 +10,7 @@ import characters.playerCharacters.Archer;
 import characters.playerCharacters.Cleric;
 import characters.playerCharacters.Mage;
 import characters.playerCharacters.Warrior;
-import items.base.Item;
+import items.Item;
 
 import java.util.List;
 import java.util.Scanner;

@@ -5,7 +5,7 @@ import actions.base.SkillAction;
 import actions.skills.FireSpell;
 import actions.skills.IceSpell;
 import actions.skills.ThunderSpell;
-import items.base.Item;
+import items.Item;
 import statusEffects.Burning;
 
 public class Mage extends Character {

@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="WIP: refactor status effect applying&#10;&#10;Add remaining files to version control">
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Implement logic for burning status damage">
+      <change afterPath="$PROJECT_DIR$/src/statusEffects/Stun.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/base/ItemAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/base/ItemAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/base/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/base/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items/base/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/base/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/statusEffects/Burning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statusEffects/Burning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/statusEffects/Poison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statusEffects/Poison.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/base/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/Item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +71,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="statusEffects" />
       <recent name="models.skills" />
       <recent name="models" />
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="items" />
     </key>
   </component>
   <component name="RunManager">
@@ -111,7 +116,7 @@
       <workItem from="1719750427815" duration="5476000" />
       <workItem from="1719755961303" duration="121000" />
       <workItem from="1719756091194" duration="7341000" />
-      <workItem from="1719765065009" duration="6362000" />
+      <workItem from="1719765065009" duration="8005000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -289,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719768185813</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Implement logic for burning status damage">
+      <option name="closed" value="true" />
+      <created>1719771554715</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1719771554715</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +341,8 @@
     <MESSAGE value="Implement logic for poison tick damage each round" />
     <MESSAGE value="WIP: logic for tick every turn and every round" />
     <MESSAGE value="WIP: refactor status effect applying&#10;&#10;Add remaining files to version control" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP: refactor status effect applying&#10;&#10;Add remaining files to version control" />
+    <MESSAGE value="Implement logic for burning status damage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement logic for burning status damage" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

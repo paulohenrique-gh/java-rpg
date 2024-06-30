@@ -3,7 +3,7 @@ package characters.playerCharacters;
 import characters.base.Character;
 import actions.base.SkillAction;
 import actions.skills.PhysicalSkill;
-import items.base.Item;
+import items.Item;
 import statusEffects.Poison;
 
 public class Archer extends Character {

@@ -1,8 +1,7 @@
 package actions.base;
 
 import characters.base.Character;
-import items.base.Item;
-import statusEffects.Poison;
+import items.Item;
 
 public class ItemAction extends BattleAction {
     private Item item;
