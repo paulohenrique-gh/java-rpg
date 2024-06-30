@@ -3,6 +3,7 @@ package characters.base;
 import actions.base.BattleAction;
 import actions.base.SkillAction;
 import items.Item;
+import statusEffects.Sleep;
 import statusEffects.base.StatusEffect;
 
 import java.util.ArrayList;
@@ -25,11 +26,13 @@ public class Character {
     protected BattleAction currentAction;
     protected double damageModifier;
     protected StatusEffect currentStatus;
+    protected boolean isAsleep;
 
     public Character() {
         this.skillList = new ArrayList<>();
         this.itemList = new ArrayList<>();
         this.damageModifier = 1.0;
+        this.isAsleep = false;
     }
 
     public String getName() {
@@ -138,6 +141,14 @@ public class Character {
         this.currentAction = currentAction;
     }
 
+    public boolean isAsleep() {
+        return isAsleep;
+    }
+
+    public void setAsleep(boolean asleep) {
+        isAsleep = asleep;
+    }
+
     public void addSkill(SkillAction skill) {
         this.skillList.add(skill);
     }
@@ -183,6 +194,8 @@ public class Character {
     }
 
     public void performAction(Character targetCharacter) {
+        if (this.isAsleep()) return;
+
         this.currentAction.perform(this, targetCharacter);
     }
 

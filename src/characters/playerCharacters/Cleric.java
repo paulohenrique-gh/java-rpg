@@ -4,6 +4,8 @@ import characters.base.Character;
 import actions.base.SkillAction;
 import actions.skills.Heal;
 import actions.skills.LightSpell;
+import items.Item;
+import statusEffects.Sleep;
 
 public class Cleric extends Character {
     private int faith;
@@ -20,6 +22,7 @@ public class Cleric extends Character {
         this.setResIce(4);
         this.setResThunder(5);
         this.setSkills();
+        this.setItems();
         this.setFaith(9);
     }
 
@@ -29,6 +32,12 @@ public class Cleric extends Character {
 
         this.addSkill(heal);
         this.addSkill(divineLight);
+    }
+
+    private void setItems() {
+        Item sleepPowder = new Item("Pó Sonífero", "Faz o alvo dormir por 3 turnos ou até ser atacado", new Sleep());
+
+        this.addItem(sleepPowder);
     }
 
     public int getFaith() {

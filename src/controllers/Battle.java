@@ -13,6 +13,7 @@ public class Battle {
     private List<Character> turnOrder;
     private Character winner;
     private static int currentRound;
+    private static Character ativeCharacter;
 
     public Battle(Character playerCharacter, Enemy enemy) {
         this.playerCharacter = playerCharacter;
@@ -57,6 +58,14 @@ public class Battle {
         currentRound = roundNumber;
     }
 
+    public static Character getAtiveCharacter() {
+        return ativeCharacter;
+    }
+
+    public void setAtiveCharacter(Character character) {
+        ativeCharacter = character;
+    }
+
     public void start(UserInterface ui) {
         generateTurnOrder();
 
@@ -90,6 +99,7 @@ public class Battle {
     }
 
     private void startTurn(Character activeCharacter, Character targetCharacter) {
+        this.setAtiveCharacter(activeCharacter);
         activeCharacter.performAction(targetCharacter);
     }
 

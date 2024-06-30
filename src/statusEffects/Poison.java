@@ -34,8 +34,8 @@ public class Poison extends StatusEffect {
         return this.getLastActiveRound() == Battle.getCurrentRound();
     }
 
-    private boolean isRemainingRoundsEmpty() {
-        return this.getRemainingActiveRounds() == 0;
+    private boolean isExpired() {
+        return this.getRemainingActiveRounds() <= 0;
     }
 
     private int applyDamage(Character targetCharacter) {
@@ -48,11 +48,11 @@ public class Poison extends StatusEffect {
 
     @Override
     public void tick(Character targetCharacter) {
-        if (this.isRemainingRoundsEmpty() || this.isSameRound()) return;
+        if (this.isExpired() || this.isSameRound()) return;
 
         int damageTaken = applyDamage(targetCharacter);
         this.setRemainingActiveRounds(this.remainingActiveRounds - 1);
-        if (this.isRemainingRoundsEmpty()) this.cleanEffect(targetCharacter);
+        if (this.isExpired()) this.cleanEffect(targetCharacter);
         this.setLastActiveRound(Battle.getCurrentRound());
         this.logTickDamage(targetCharacter, damageTaken);
     }

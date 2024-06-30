@@ -39,6 +39,7 @@ public class Heal extends SkillAction {
     }
 
     @Override
+    // FIXME
     protected void logSkillUsage(Character activeCharacter, Character targetCharacter, int prevHp, int prevMp) {
         String activeName = activeCharacter.getName();
         int curHp = activeCharacter.getCurHitPoints();
