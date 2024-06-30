@@ -38,9 +38,12 @@ public class SkillAction extends BattleAction {
         this.mpCost = mpCost;
     }
 
+    public int calculateDamage(Character activeCharacter, Character targetCharacter) {
+        return (int) (this.getBaseDamage() - targetCharacter.getDefense() * activeCharacter.getDamageModifier());
+    }
+
     @Override
     public void perform(Character activeCharacter, Character targetCharacter) {
-
         if (activeCharacter.getCurMagicPoints() < this.getMpCost()) {
             this.logNoMp(activeCharacter.getName());
             return;
@@ -48,7 +51,7 @@ public class SkillAction extends BattleAction {
 
         int prevHp = targetCharacter.getCurHitPoints();
         int prevMp = activeCharacter.getCurMagicPoints();
-        targetCharacter.setCurHitPoints(prevHp + targetCharacter.getDefense() - activeCharacter.getAttack());
+        targetCharacter.setCurHitPoints(prevHp - this.calculateDamage(activeCharacter, targetCharacter));
         activeCharacter.setCurMagicPoints(prevMp - this.getMpCost());
 
         this.logSkillUsage(activeCharacter, targetCharacter, prevHp, targetCharacter.getCurHitPoints());

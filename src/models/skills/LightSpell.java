@@ -10,7 +10,7 @@ public class LightSpell extends Spell {
     }
 
     @Override
-    public int calculateElementalDamage(Character activeCharacter, Character targetCharacter) {
+    public int calculateDamage(Character activeCharacter, Character targetCharacter) {
         return (int) (this.getBaseDamage() - targetCharacter.getResLight() * activeCharacter.getDamageModifier());
     }
 }

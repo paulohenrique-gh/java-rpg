@@ -13,6 +13,7 @@ public class Troll extends RegularMob {
         this.setResFire(4);
         this.setResIce(2);
         this.setResThunder(-4);
+        this.setResLight(3);
         this.setType("Inimigo comum");
         this.setExp(50);
     }

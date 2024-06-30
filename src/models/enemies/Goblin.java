@@ -13,6 +13,7 @@ public class Goblin extends RegularMob {
         this.setResFire(1);
         this.setResIce(3);
         this.setResThunder(3);
+        this.setResLight(2);
         this.setType("Inimigo comum");
         this.setExp(20);
     }

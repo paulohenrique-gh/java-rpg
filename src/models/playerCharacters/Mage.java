@@ -1,6 +1,10 @@
 package models.playerCharacters;
 
 import models.base.Character;
+import models.base.SkillAction;
+import models.skills.FireSpell;
+import models.skills.IceSpell;
+import models.skills.ThunderSpell;
 
 public class Mage extends Character {
     private int intelligence;
@@ -21,7 +25,13 @@ public class Mage extends Character {
     }
 
     private void setSkills() {
-//        SkillAction fire = new Spell()
+        SkillAction fire = new FireSpell("Tempestade de Fogo", 12, 15);
+        SkillAction ice = new IceSpell("Nevasca", 12, 15);
+        SkillAction thunder = new ThunderSpell("Raio de Odin", 12, 15);
+
+        this.addSkill(fire);
+        this.addSkill(ice);
+        this.addSkill(thunder);
     }
 
     public int getIntelligence() {

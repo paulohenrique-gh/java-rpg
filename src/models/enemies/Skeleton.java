@@ -10,9 +10,10 @@ public class Skeleton extends RegularMob {
         this.setCurHitPoints(45);
         this.setAttack(8);
         this.setDefense(4);
-        this.setResFire(-3);
+        this.setResFire(1);
         this.setResIce(5);
         this.setResThunder(2);
+        this.setResLight(-3);
         this.setType("Inimigo comum");
         this.setExp(35);
     }

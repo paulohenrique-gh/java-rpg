@@ -13,6 +13,7 @@ public class Dragon extends Boss {
         this.setResFire(5);
         this.setResIce(-1);
         this.setResThunder(4);
+        this.setResLight(3);
         this.setType("Chefe");
         this.setExp(100);
     }

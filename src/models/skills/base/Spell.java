@@ -11,6 +11,4 @@ public abstract class Spell extends SkillAction {
         this.setType("Magia");
         this.setBaseDamage(baseDamage);
     }
-
-    public abstract int calculateElementalDamage(Character activeCharacter, Character targetCharacter);
 }

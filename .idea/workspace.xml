@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="WIP: refactor action classes">
-      <change afterPath="$PROJECT_DIR$/src/models/skills/FireSpell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/skills/IceSpell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/skills/LightSpell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/skills/ThunderSpell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/skills/base/Spell.java" afterDir="false" />
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Create elemental spell classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/base/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/base/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/playerCharacters/Cleric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Cleric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/base/SkillAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/base/SkillAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/enemies/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/enemies/Dragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/enemies/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/enemies/Goblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/enemies/Skeleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/enemies/Skeleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/enemies/Troll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/enemies/Troll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/playerCharacters/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/playerCharacters/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/skills/Heal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/skills/Heal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/skills/Spell.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/FireSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/skills/FireSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/IceSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/skills/IceSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/LightSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/skills/LightSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/ThunderSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/skills/ThunderSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/base/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/skills/base/Spell.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719618041760</updated>
       <workItem from="1719618042829" duration="3177000" />
-      <workItem from="1719660575202" duration="42662000" />
+      <workItem from="1719660575202" duration="43880000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -208,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719704059321</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Create elemental spell classes">
+      <option name="closed" value="true" />
+      <created>1719708258860</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1719708258860</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +246,7 @@
     <MESSAGE value="Set base monsters stats" />
     <MESSAGE value="Fix bug in damage/healing calculation" />
     <MESSAGE value="WIP: refactor action classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP: refactor action classes" />
+    <MESSAGE value="Create elemental spell classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create elemental spell classes" />
   </component>
 </project>
