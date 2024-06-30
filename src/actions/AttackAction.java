@@ -8,7 +8,15 @@ public class AttackAction extends BattleAction {
     public void perform(Character activeCharacter, Character targetCharacter) {
         int prevHp = targetCharacter.getCurHitPoints();
         targetCharacter.setCurHitPoints(prevHp + targetCharacter.getDefense() - activeCharacter.getAttack());
+        this.wakeSleepingCharacter(targetCharacter);
         this.logAction(activeCharacter, targetCharacter, prevHp);
+    }
+
+    private void wakeSleepingCharacter(Character targetCharacter) {
+        if (targetCharacter.isAsleep()) {
+            targetCharacter.setCurrentStatus(null);
+            targetCharacter.setAsleep(false);
+        }
     }
 
     private void logAction(Character activeCharacter, Character targetCharacter, int prevHp) {
