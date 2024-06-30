@@ -81,6 +81,10 @@ public class UserInterface {
                     action = new AttackAction();
                     break;
                 case "2":
+                    if (this.selectedCharacter.getCurMagicPoints() <= 0) {
+                        System.out.println(this.selectedCharacter.getName() + " não tem pontos de magia");
+                        break;
+                    }
                     action = this.chooseSkill();
                     break;
                 case "3":
@@ -152,12 +156,23 @@ public class UserInterface {
                 System.out.println("Opção inválida");
             }
         }
-
         return new ItemAction(item);
     }
 
     public Character getSelectedCharacter() {
         return this.selectedCharacter;
+    }
+
+    public void printBattleHeader() {
+        System.out.println("\n================================================");
+        System.out.println("                  NOVA BATALHA                  ");
+        System.out.println("================================================\n");
+    }
+
+    public void printGameOver() {
+        System.out.println("\n================================================");
+        System.out.println("                    GAME OVER                       ");
+        System.out.println("================================================\n");
     }
 
 }

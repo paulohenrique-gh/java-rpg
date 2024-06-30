@@ -27,8 +27,8 @@ public class Cleric extends Character {
     }
 
     private void setSkills() {
-        SkillAction heal = new Heal("Heal", 50, 10);
-        SkillAction divineLight = new LightSpell("Divine Light", 10, 15);
+        SkillAction heal = new Heal("Cura", 50, 10);
+        SkillAction divineLight = new LightSpell("Luz Divina", 10, 15);
 
         this.addSkill(heal);
         this.addSkill(divineLight);

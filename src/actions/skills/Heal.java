@@ -30,16 +30,15 @@ public class Heal extends SkillAction {
         }
 
         int damage = this.getBaseDamage();
-        int prevHp = targetCharacter.getCurHitPoints();
+        int prevHp = activeCharacter.getCurHitPoints();
         int prevMp = activeCharacter.getCurMagicPoints();
-        targetCharacter.setCurHitPoints(prevHp + damage);
+        activeCharacter.setCurHitPoints(prevHp + damage);
         activeCharacter.setCurMagicPoints(prevMp - this.getMpCost());
 
         this.logSkillUsage(activeCharacter, targetCharacter, prevHp, prevMp);
     }
 
     @Override
-    // FIXME
     protected void logSkillUsage(Character activeCharacter, Character targetCharacter, int prevHp, int prevMp) {
         String activeName = activeCharacter.getName();
         int curHp = activeCharacter.getCurHitPoints();

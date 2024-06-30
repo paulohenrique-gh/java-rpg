@@ -47,13 +47,14 @@ public class Game {
 
         for (Enemy enemy : this.enemies) {
             Battle battle = new Battle(playerCharacter, enemy);
+            this.ui.printBattleHeader();
 
             System.out.println("Você se depara com um " + enemy.getName());
             battle.start(this.ui);
             Character winner = battle.getWinner();
 
             if (winner == enemy) {
-                System.out.println("Você perdeu!");
+                this.ui.printGameOver();
                 break;
             } else if (winner == this.getPlayerCharacter()) {
                 System.out.println("Você venceu essa batalha!");
