@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class UserInterface {
     Scanner scanner = new Scanner(System.in);
-    Character selectedCharacter;
+    private Character selectedCharacter;
 
     public void mainMenu() {
         System.out.println("Bem-vindo ao Jogo!");
@@ -84,7 +84,6 @@ public class UserInterface {
                     break;
                 default:
                     System.out.println("Opção inválida");
-                    ;
             }
             ;
         }

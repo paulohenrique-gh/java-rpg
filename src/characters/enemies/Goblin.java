@@ -1,8 +1,8 @@
 package characters.enemies;
 
-import characters.base.RegularMob;
+import characters.base.Enemy;
 
-public class Goblin extends RegularMob {
+public class Goblin extends Enemy {
     public Goblin() {
         super();
         this.setName("Goblin");

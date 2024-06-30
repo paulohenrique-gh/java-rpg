@@ -9,7 +9,6 @@ public class Archer extends Character {
 
     public Archer() {
         super();
-        this.dexterity = 9;
         this.setMaxHitPoints(100);
         this.setCurHitPoints(100);
         this.setMaxMagicPoints(70);
@@ -20,6 +19,7 @@ public class Archer extends Character {
         this.setResIce(4);
         this.setResThunder(5);
         this.setSkills();
+        this.setDexterity(9);
     }
 
     public int getDexterity() {

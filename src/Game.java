@@ -1,7 +1,5 @@
 import characters.base.Character;
 import characters.base.Enemy;
-import characters.base.RegularMob;
-import characters.base.Boss;
 import characters.enemies.Goblin;
 import characters.enemies.Skeleton;
 import characters.enemies.Troll;
@@ -33,12 +31,12 @@ public class Game {
     }
 
     public void setEnemies() {
-        RegularMob enemy1 = new Goblin();
-        RegularMob enemy2 = new Skeleton();
-        RegularMob enemy3 = new Troll();
-        Boss boss = new Dragon();
+        Enemy enemy1 = new Goblin();
+        Enemy enemy2 = new Skeleton();
+        Enemy enemy3 = new Troll();
+        Enemy boss = new Dragon();
 
-        this.enemies = new ArrayList<Enemy>(List.of(enemy1, enemy2, enemy3, boss));
+        this.enemies = new ArrayList<>(List.of(enemy1, enemy2, enemy3, boss));
     }
 
     public void start() {
@@ -56,10 +54,10 @@ public class Game {
                 System.out.println("Você perdeu!");
                 break;
             } else if (winner == this.getPlayerCharacter()) {
-                System.out.println("Você venceu essa batalha");
+                System.out.println("Você venceu essa batalha!");
             }
         }
 
-        System.out.println("fim do jogo");
+        System.out.println("Fim do jogo");
     }
 }

@@ -23,7 +23,7 @@ public class Character {
     protected double damageModifier;
 
     public Character() {
-        this.skillList = new ArrayList<SkillAction>();
+        this.skillList = new ArrayList<>();
         this.damageModifier = 1.0;
     }
 
