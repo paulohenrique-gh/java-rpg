@@ -1,8 +1,8 @@
 package characters.enemies;
 
-import characters.base.Enemy;
+import characters.enemies.base.RegularMob;
 
-public class Skeleton extends Enemy {
+public class Skeleton extends RegularMob {
     public Skeleton() {
         super();
         this.setName("Esqueleto");

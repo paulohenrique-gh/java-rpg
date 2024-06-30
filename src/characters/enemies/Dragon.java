@@ -1,8 +1,8 @@
 package characters.enemies;
 
-import characters.base.Enemy;
+import characters.enemies.base.Boss;
 
-public class Dragon extends Enemy {
+public class Dragon extends Boss {
     public Dragon() {
         super();
         this.setName("Dragão");

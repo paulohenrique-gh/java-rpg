@@ -4,6 +4,8 @@ import actions.EscapeAction;
 import actions.base.BattleAction;
 import characters.base.Character;
 import characters.base.Enemy;
+import characters.enemies.base.Boss;
+import characters.enemies.base.RegularMob;
 
 import java.util.*;
 
@@ -91,7 +93,7 @@ public class Battle {
 
             winner = this.validateWinner(character2, character1);
 
-            if (action instanceof EscapeAction) break;
+            if (action instanceof EscapeAction && this.getEnemy() instanceof RegularMob) break;
         }
 
         this.setWinner(winner);
