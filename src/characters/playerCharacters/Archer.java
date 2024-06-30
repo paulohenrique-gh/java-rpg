@@ -1,8 +1,8 @@
-package models.playerCharacters;
+package characters.playerCharacters;
 
-import models.base.Character;
-import models.base.SkillAction;
-import models.skills.PhysicalSkill;
+import characters.base.Character;
+import actions.base.SkillAction;
+import actions.skills.PhysicalSkill;
 
 public class Archer extends Character {
     private int dexterity;
@@ -22,6 +22,14 @@ public class Archer extends Character {
         this.setSkills();
     }
 
+    public int getDexterity() {
+        return dexterity;
+    }
+
+    public void setDexterity(int dexterity) {
+        this.dexterity = dexterity;
+    }
+
     private void setSkills() {
         SkillAction arrows = new PhysicalSkill("Chuva de Flechas", 10, 5);
         SkillAction tripleAttack = new PhysicalSkill("Ataque Triplo", this.getAttack() * 3, 10);
@@ -37,14 +45,21 @@ public class Archer extends Character {
     @Override
     public String toString() {
         return "Archer{" +
-                "name='" + name + '\'' +
-                ", hitPoints=" + maxHitPoints +
-                ", strength=" + attack +
+                "dexterity=" + dexterity +
+                ", name='" + name + '\'' +
+                ", maxHitPoints=" + maxHitPoints +
+                ", curHitPoints=" + curHitPoints +
+                ", maxMagicPoints=" + maxMagicPoints +
+                ", curMagicPoints=" + curMagicPoints +
+                ", attack=" + attack +
                 ", defense=" + defense +
                 ", skillList=" + skillList +
                 ", resFire=" + resFire +
                 ", resIce=" + resIce +
                 ", resThunder=" + resThunder +
+                ", resLight=" + resLight +
+                ", currentAction=" + currentAction +
+                ", damageModifier=" + damageModifier +
                 '}';
     }
 }

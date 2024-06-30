@@ -1,12 +1,12 @@
-import models.actions.AttackAction;
-import models.actions.EscapeAction;
-import models.base.BattleAction;
-import models.base.Character;
-import models.base.SkillAction;
-import models.playerCharacters.Archer;
-import models.playerCharacters.Cleric;
-import models.playerCharacters.Mage;
-import models.playerCharacters.Warrior;
+import actions.AttackAction;
+import actions.EscapeAction;
+import actions.base.BattleAction;
+import characters.base.Character;
+import actions.base.SkillAction;
+import characters.playerCharacters.Archer;
+import characters.playerCharacters.Cleric;
+import characters.playerCharacters.Mage;
+import characters.playerCharacters.Warrior;
 
 import java.util.List;
 import java.util.Scanner;

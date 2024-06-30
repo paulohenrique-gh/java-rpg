@@ -1,7 +1,7 @@
-package models.skills;
+package actions.skills;
 
-import models.base.Character;
-import models.base.SkillAction;
+import characters.base.Character;
+import actions.base.SkillAction;
 
 public class Heal extends SkillAction {
     private int mpCost;

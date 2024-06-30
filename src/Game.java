@@ -1,11 +1,11 @@
-import models.base.Character;
-import models.base.Enemy;
-import models.base.RegularMob;
-import models.base.Boss;
-import models.enemies.Goblin;
-import models.enemies.Skeleton;
-import models.enemies.Troll;
-import models.enemies.Dragon;
+import characters.base.Character;
+import characters.base.Enemy;
+import characters.base.RegularMob;
+import characters.base.Boss;
+import characters.enemies.Goblin;
+import characters.enemies.Skeleton;
+import characters.enemies.Troll;
+import characters.enemies.Dragon;
 
 import java.util.ArrayList;
 import java.util.List;

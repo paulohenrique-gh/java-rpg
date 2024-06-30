@@ -1,6 +1,7 @@
-package models.base;
+package characters.base;
 
-import models.actions.AttackAction;
+import actions.AttackAction;
+import actions.base.BattleAction;
 
 public class Enemy extends Character {
     private String type;

@@ -1,7 +1,7 @@
-package models.skills;
+package actions.skills;
 
-import models.base.Character;
-import models.skills.base.Spell;
+import characters.base.Character;
+import actions.skills.base.Spell;
 
 public class FireSpell extends Spell {
     public FireSpell(String name, int baseDamage, int mpCost) {

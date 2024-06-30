@@ -1,6 +1,7 @@
-package models.base;
+package characters.base;
 
-import models.skills.base.Spell;
+import actions.base.BattleAction;
+import actions.base.SkillAction;
 
 import java.util.ArrayList;
 import java.util.List;

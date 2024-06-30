@@ -1,6 +1,6 @@
-package models.enemies;
+package characters.enemies;
 
-import models.base.Boss;
+import characters.base.Boss;
 
 public class Dragon extends Boss {
     public Dragon() {
@@ -22,13 +22,19 @@ public class Dragon extends Boss {
     public String toString() {
         return "Dragon{" +
                 "name='" + name + '\'' +
-                ", hitPoints=" + maxHitPoints +
-                ", strength=" + attack +
+                ", maxHitPoints=" + maxHitPoints +
+                ", curHitPoints=" + curHitPoints +
+                ", maxMagicPoints=" + maxMagicPoints +
+                ", curMagicPoints=" + curMagicPoints +
+                ", attack=" + attack +
                 ", defense=" + defense +
                 ", skillList=" + skillList +
                 ", resFire=" + resFire +
                 ", resIce=" + resIce +
                 ", resThunder=" + resThunder +
+                ", resLight=" + resLight +
+                ", currentAction=" + currentAction +
+                ", damageModifier=" + damageModifier +
                 '}';
     }
 }

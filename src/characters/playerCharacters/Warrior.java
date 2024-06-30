@@ -1,8 +1,8 @@
-package models.playerCharacters;
+package characters.playerCharacters;
 
-import models.base.SkillAction;
-import models.base.Character;
-import models.skills.Heal;
+import actions.base.SkillAction;
+import characters.base.Character;
+import actions.skills.Heal;
 
 public class Warrior extends Character {
     public Warrior() {
@@ -43,7 +43,9 @@ public class Warrior extends Character {
                 ", resFire=" + resFire +
                 ", resIce=" + resIce +
                 ", resThunder=" + resThunder +
+                ", resLight=" + resLight +
                 ", currentAction=" + currentAction +
+                ", damageModifier=" + damageModifier +
                 '}';
     }
 }

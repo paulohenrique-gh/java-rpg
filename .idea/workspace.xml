@@ -4,13 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Set spells for mage class">
-      <change afterPath="$PROJECT_DIR$/src/models/skills/PhysicalSkill.java" afterDir="false" />
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Add spells for remaining classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/base/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/base/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/base/SkillAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/base/SkillAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/playerCharacters/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Archer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/playerCharacters/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playerCharacters/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/actions/AttackAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/AttackAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/actions/EscapeAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/EscapeAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/base/BattleAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/base/BattleAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/base/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/base/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/base/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/base/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/base/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/base/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/base/RegularMob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/base/RegularMob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/base/SkillAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/base/SkillAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/enemies/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Dragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/enemies/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Goblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/enemies/Skeleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Skeleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/enemies/Troll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Troll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/playerCharacters/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/playerCharacters/Cleric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Cleric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/playerCharacters/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/playerCharacters/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/FireSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/skills/FireSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/Heal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/skills/Heal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/IceSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/skills/IceSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/LightSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/skills/LightSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/PhysicalSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/skills/PhysicalSkill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/ThunderSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/skills/ThunderSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/skills/base/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/skills/base/Spell.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -99,7 +121,8 @@
       <option name="presentableId" value="Default" />
       <updated>1719618041760</updated>
       <workItem from="1719618042829" duration="3177000" />
-      <workItem from="1719660575202" duration="45213000" />
+      <workItem from="1719660575202" duration="46007000" />
+      <workItem from="1719711630406" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -221,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719709534654</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add spells for remaining classes">
+      <option name="closed" value="true" />
+      <created>1719710972172</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1719710972172</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +284,7 @@
     <MESSAGE value="WIP: refactor action classes" />
     <MESSAGE value="Create elemental spell classes" />
     <MESSAGE value="Set spells for mage class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set spells for mage class" />
+    <MESSAGE value="Add spells for remaining classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add spells for remaining classes" />
   </component>
 </project>

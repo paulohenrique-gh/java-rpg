@@ -1,6 +1,6 @@
-package models.enemies;
+package characters.enemies;
 
-import models.base.RegularMob;
+import characters.base.RegularMob;
 
 public class Troll extends RegularMob {
     public Troll() {
@@ -22,13 +22,19 @@ public class Troll extends RegularMob {
     public String toString() {
         return "Troll{" +
                 "name='" + name + '\'' +
-                ", hitPoints=" + maxHitPoints +
-                ", strength=" + attack +
+                ", maxHitPoints=" + maxHitPoints +
+                ", curHitPoints=" + curHitPoints +
+                ", maxMagicPoints=" + maxMagicPoints +
+                ", curMagicPoints=" + curMagicPoints +
+                ", attack=" + attack +
                 ", defense=" + defense +
                 ", skillList=" + skillList +
                 ", resFire=" + resFire +
                 ", resIce=" + resIce +
                 ", resThunder=" + resThunder +
+                ", resLight=" + resLight +
+                ", currentAction=" + currentAction +
+                ", damageModifier=" + damageModifier +
                 '}';
     }
 }

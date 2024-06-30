@@ -1,7 +1,7 @@
-package models.actions;
+package actions;
 
-import models.base.BattleAction;
-import models.base.Character;
+import actions.base.BattleAction;
+import characters.base.Character;
 
 public class AttackAction extends BattleAction {
     @Override

@@ -1,7 +1,7 @@
-import models.actions.EscapeAction;
-import models.base.BattleAction;
-import models.base.Character;
-import models.base.Enemy;
+import actions.EscapeAction;
+import actions.base.BattleAction;
+import characters.base.Character;
+import characters.base.Enemy;
 
 import java.util.*;
 

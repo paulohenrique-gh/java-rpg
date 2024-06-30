@@ -1,6 +1,6 @@
-package models.skills;
+package actions.skills;
 
-import models.base.SkillAction;
+import actions.base.SkillAction;
 
 public class PhysicalSkill extends SkillAction {
     public PhysicalSkill(String name, int baseDamage, int mpCost) {

@@ -1,16 +1,17 @@
-package models.playerCharacters;
+package characters.playerCharacters;
 
-import models.base.Character;
-import models.base.SkillAction;
-import models.skills.Heal;
-import models.skills.LightSpell;
-import models.skills.base.Spell;
+import characters.base.Character;
+import actions.base.SkillAction;
+import actions.skills.FireSpell;
+import actions.skills.IceSpell;
+import actions.skills.ThunderSpell;
 
-public class Cleric extends Character {
-    private int faith;
+public class Mage extends Character {
+    private int intelligence;
 
-    public Cleric() {
+    public Mage() {
         super();
+        this.intelligence = 9;
         this.setMaxHitPoints(100);
         this.setCurHitPoints(100);
         this.setMaxMagicPoints(70);
@@ -21,33 +22,34 @@ public class Cleric extends Character {
         this.setResIce(4);
         this.setResThunder(5);
         this.setSkills();
-        this.setFaith(9);
     }
 
     private void setSkills() {
-        SkillAction heal = new Heal("Heal", 50, 10);
-        SkillAction divineLight = new LightSpell("Divine Light", 10, 15);
+        SkillAction fire = new FireSpell("Tempestade de Fogo", 12, 15);
+        SkillAction ice = new IceSpell("Nevasca", 12, 15);
+        SkillAction thunder = new ThunderSpell("Raio de Odin", 12, 15);
 
-        this.addSkill(heal);
-        this.addSkill(divineLight);
+        this.addSkill(fire);
+        this.addSkill(ice);
+        this.addSkill(thunder);
     }
 
-    public int getFaith() {
-        return faith;
+    public int getIntelligence() {
+        return intelligence;
     }
 
-    public void setFaith(int faith) {
-        this.faith = faith;
+    public void setIntelligence(int intelligence) {
+        this.intelligence = intelligence;
     }
 
     public static String getClassDescription() {
-        return "Uma curandeira com habilidades de expurgar mortos-vivos";
+        return "Um sábio capaz de conjurar as forças da natureza";
     }
 
     @Override
     public String toString() {
-        return "Cleric{" +
-                "faith=" + faith +
+        return "Mage{" +
+                "intelligence=" + intelligence +
                 ", name='" + name + '\'' +
                 ", maxHitPoints=" + maxHitPoints +
                 ", curHitPoints=" + curHitPoints +
@@ -59,7 +61,9 @@ public class Cleric extends Character {
                 ", resFire=" + resFire +
                 ", resIce=" + resIce +
                 ", resThunder=" + resThunder +
+                ", resLight=" + resLight +
                 ", currentAction=" + currentAction +
+                ", damageModifier=" + damageModifier +
                 '}';
     }
 }

@@ -1,4 +1,6 @@
-package models.base;
+package actions.base;
+
+import characters.base.Character;
 
 public class SkillAction extends BattleAction {
     protected String name;

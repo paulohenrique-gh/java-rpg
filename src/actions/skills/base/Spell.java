@@ -1,7 +1,6 @@
-package models.skills.base;
+package actions.skills.base;
 
-import models.base.Character;
-import models.base.SkillAction;
+import actions.base.SkillAction;
 
 public abstract class Spell extends SkillAction {
     public Spell(String name, int baseDamage, int mpCost) {
