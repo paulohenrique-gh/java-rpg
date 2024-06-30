@@ -182,7 +182,7 @@ public class Character {
         this.currentAction.perform(this, targetCharacter);
     }
 
-    public void statusRoundTickDamage() {
+    public void onTurnEnd() {
         if (this.currentStatus == null) return;
 
         this.currentStatus.tick(this);

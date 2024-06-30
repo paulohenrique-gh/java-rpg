@@ -12,14 +12,12 @@ public class Battle {
     private Enemy enemy;
     private List<Character> turnOrder;
     private Character winner;
-    private static int currentTurn;
     private static int currentRound;
 
     public Battle(Character playerCharacter, Enemy enemy) {
         this.playerCharacter = playerCharacter;
         this.enemy = enemy;
         this.turnOrder = new ArrayList<>(Arrays.asList(playerCharacter, enemy));
-        currentTurn = 0;
         currentRound = 0;
     }
 
@@ -51,14 +49,6 @@ public class Battle {
         Collections.shuffle(this.turnOrder);
     }
 
-    public static int getCurrentTurn() {
-        return currentTurn;
-    }
-
-    public void setCurrentTurn(int turnNumber) {
-        currentTurn = turnNumber;
-    }
-
     public static int getCurrentRound() {
         return currentRound;
     }
@@ -73,7 +63,6 @@ public class Battle {
         Character winner = null;
 
         while (winner == null) {
-            this.setCurrentRound(getCurrentRound() + 1);
             BattleAction action = ui.chooseAction();
 
             Character character1 = this.turnOrder.get(0);
@@ -81,34 +70,33 @@ public class Battle {
             character1.setCurrentAction(action);
             character2.setCurrentAction(action);
 
-            this.setCurrentTurn(getCurrentTurn() + 1);
             startTurn(character1, character2);
+            this.notifyTurnEnd();
 
             winner = this.validateWinner(character1, character2);
             if (winner != null) break;
 
-            this.setCurrentTurn(getCurrentTurn() + 1);
             startTurn(character2, character1);
+            this.setCurrentRound(getCurrentRound() + 1);
+            this.notifyTurnEnd();
 
             winner = this.validateWinner(character2, character1);
 
             if (action instanceof EscapeAction) break;
-
-            notifyFinishedRound();
         }
 
         this.setWinner(winner);
         this.setCurrentRound(0);
-        this.setCurrentTurn(0);
     }
 
     private void startTurn(Character activeCharacter, Character targetCharacter) {
         activeCharacter.performAction(targetCharacter);
     }
 
-    private void notifyFinishedRound() {
-        this.playerCharacter.statusRoundTickDamage();
-        this.enemy.statusRoundTickDamage();
+    private void notifyTurnEnd() {
+        for (Character character : this.turnOrder) {
+            character.onTurnEnd();
+        }
     }
 
     private Character validateWinner(Character activeCharacter, Character targetCharacter) {
