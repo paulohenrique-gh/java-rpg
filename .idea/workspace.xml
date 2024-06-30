@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="WIP: logic for tick every turn and every round">
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="WIP: refactor status effect applying&#10;&#10;Add remaining files to version control">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/base/ItemAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/base/ItemAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/base/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/base/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items/base/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/items/base/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/statusEffects/Burning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statusEffects/Burning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/statusEffects/Poison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statusEffects/Poison.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +48,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -106,7 +111,7 @@
       <workItem from="1719750427815" duration="5476000" />
       <workItem from="1719755961303" duration="121000" />
       <workItem from="1719756091194" duration="7341000" />
-      <workItem from="1719765065009" duration="2880000" />
+      <workItem from="1719765065009" duration="6362000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -276,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719767029896</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="WIP: refactor status effect applying&#10;&#10;Add remaining files to version control">
+      <option name="closed" value="true" />
+      <created>1719768185813</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1719768185813</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,22 +327,15 @@
     <MESSAGE value="WIP: Poison tick damage" />
     <MESSAGE value="Implement logic for poison tick damage each round" />
     <MESSAGE value="WIP: logic for tick every turn and every round" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP: logic for tick every turn and every round" />
+    <MESSAGE value="WIP: refactor status effect applying&#10;&#10;Add remaining files to version control" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP: refactor status effect applying&#10;&#10;Add remaining files to version control" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controllers/Battle.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="this.isSameRound()" language="JAVA" />
         <watch expression="getCurrentRound()" language="JAVA" />
+        <watch expression="this.getRemainingActiveTurns()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

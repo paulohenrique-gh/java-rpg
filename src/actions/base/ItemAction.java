@@ -14,6 +14,7 @@ public class ItemAction extends BattleAction {
     @Override
     public void perform(Character activeCharacter, Character targetCharacter) {
         targetCharacter.setCurrentStatus(this.item.getStatusEffect());
+        activeCharacter.removeItem(this.item);
         this.logItemUsage(activeCharacter, targetCharacter);
     }
 

@@ -38,25 +38,33 @@ public class Poison extends StatusEffect {
         return this.getRemainingActiveRounds() == 0;
     }
 
+    private int applyDamage(Character targetCharacter) {
+        int prevHp = targetCharacter.getCurHitPoints();
+        int damageApplied = this.tickDamage;
+        targetCharacter.setCurHitPoints(prevHp - damageApplied);
+
+        return damageApplied;
+    }
+
     @Override
     public void tick(Character targetCharacter) {
         if (this.isRemainingRoundsEmpty() || this.isSameRound()) return;
 
-        int prevHp = targetCharacter.getCurHitPoints();
-        targetCharacter.setCurHitPoints(prevHp - this.tickDamage);
+        int damageTaken = applyDamage(targetCharacter);
         this.setRemainingActiveRounds(this.remainingActiveRounds - 1);
-        if (this.getRemainingActiveRounds() <= 0) this.cleanEffect(targetCharacter);
+        if (this.isRemainingRoundsEmpty()) this.cleanEffect(targetCharacter);
         this.setLastActiveRound(Battle.getCurrentRound());
-        this.logTickDamage(targetCharacter);
+        this.logTickDamage(targetCharacter, damageTaken);
     }
 
-    private void logTickDamage(Character targetCharacter) {
+    private void logTickDamage(Character targetCharacter, int damageTaken) {
         String targetName = targetCharacter.getName();
         int curHp = targetCharacter.getCurHitPoints();
 
         System.out.println("================================================");
-        System.out.println(targetName + " está envenado e sofreu " + this.getTickDamage() + " de dano");
+        System.out.println(targetName + " está envenado e sofreu " + damageTaken + " de dano");
         System.out.println(targetName + " tem " + curHp + " pontos de vida");
+        System.out.println("================================================");
     }
 
     private void cleanEffect(Character targetCharacter) {

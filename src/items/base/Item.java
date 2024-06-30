@@ -4,13 +4,11 @@ import statusEffects.base.StatusEffect;
 
 public class Item {
     private String name;
-    private int baseDamage;
     private String description;
     private StatusEffect statusEffect;
 
-    public Item(String name, int baseDamage, String description, StatusEffect effect) {
+    public Item(String name, String description, StatusEffect effect) {
         this.name = name;
-        this.baseDamage = baseDamage;
         this.description = description;
         this.statusEffect = effect;
     }
@@ -21,14 +19,6 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getBaseDamage() {
-        return baseDamage;
-    }
-
-    public void setBaseDamage(int baseDamage) {
-        this.baseDamage = baseDamage;
     }
 
     public String getDescription() {

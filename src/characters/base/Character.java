@@ -150,6 +150,10 @@ public class Character {
         this.itemList.add(item);
     }
 
+    public void removeItem(Item item) {
+        this.itemList.remove(item);
+    }
+
     public List<Item> getItemList() {
         return this.itemList;
     }

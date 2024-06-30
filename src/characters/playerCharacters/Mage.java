@@ -5,6 +5,8 @@ import actions.base.SkillAction;
 import actions.skills.FireSpell;
 import actions.skills.IceSpell;
 import actions.skills.ThunderSpell;
+import items.base.Item;
+import statusEffects.Burning;
 
 public class Mage extends Character {
     private int intelligence;
@@ -22,6 +24,7 @@ public class Mage extends Character {
         this.setResThunder(5);
         this.setSkills();
         this.setIntelligence(9);
+        this.setItems();
     }
 
     private void setSkills() {
@@ -32,6 +35,12 @@ public class Mage extends Character {
         this.addSkill(fire);
         this.addSkill(ice);
         this.addSkill(thunder);
+    }
+
+    private void setItems() {
+        Item fireBrand = new Item("Marca de Fogo", "Causa dano no alvo a cada turno", new Burning());
+
+        this.addItem(fireBrand);
     }
 
     public int getIntelligence() {
