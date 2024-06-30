@@ -156,12 +156,6 @@ public class Character {
         return (int) (damage * this.getDamageModifier());
     }
 
-    private int calculateElementalDamage(Character targetCharacter, Spell spell) {
-        // TODO
-        int damage = spell.getBaseDamage() - targetCharacter.getDefense();
-        return 0;
-    }
-
     public void performAction(Character targetCharacter) {
         this.currentAction.perform(this, targetCharacter);
     }

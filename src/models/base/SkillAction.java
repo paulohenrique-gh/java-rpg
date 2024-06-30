@@ -1,10 +1,10 @@
 package models.base;
 
 public class SkillAction extends BattleAction {
-    private String name;
-    private String type;
-    private int baseDamage;
-    private int mpCost;
+    protected String name;
+    protected String type;
+    protected int baseDamage;
+    protected int mpCost;
 
     public String getName() {
         return name;

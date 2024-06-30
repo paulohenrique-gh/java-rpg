@@ -11,6 +11,7 @@ public class Mage extends Character {
 
     public Mage() {
         super();
+        this.intelligence = 9;
         this.setMaxHitPoints(100);
         this.setCurHitPoints(100);
         this.setMaxMagicPoints(70);
@@ -21,7 +22,6 @@ public class Mage extends Character {
         this.setResIce(4);
         this.setResThunder(5);
         this.setSkills();
-        this.setIntelligence(9);
     }
 
     private void setSkills() {
