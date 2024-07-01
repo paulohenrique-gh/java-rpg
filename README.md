@@ -37,7 +37,7 @@ No início da rodada o jogador pode escolher entre atacar, usar habilidade, usar
     - Bomba de Veneno | Efeito: Veneno | Descrição: Causa dano no alvo a cada rodada por 3 rodadas
 - Fugir: vai para a próxima batalha.
 
-O jogo acaba quando o jogador derrota todos os inimigos ou quando seus pontos de vida acabam.
+O jogo acaba quando o jogador derrota todos os inimigos ou quando seus pontos de vida chegam a 0.
 
 ## Conceitos de POO aplicados
 
