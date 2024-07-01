@@ -98,7 +98,7 @@ public class Battle {
 
         this.setWinner(winner);
         this.setCurrentRound(0);
-        if (this.getWinner().equals(this.getPlayerCharacter())) {
+        if (this.getWinner() != null && this.getWinner().equals(this.getPlayerCharacter())) {
             this.getPlayerCharacter().updateExp(this.getEnemy().getExpOnKill());
         }
     }

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Update cleric description">
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Update README">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/Battle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +27,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/models/playerCharacters/Archer.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
     <option name="showPreview" value="true" />
@@ -46,7 +46,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -115,7 +115,8 @@
       <workItem from="1719755961303" duration="121000" />
       <workItem from="1719756091194" duration="7341000" />
       <workItem from="1719765065009" duration="27351000" />
-      <workItem from="1719837481681" duration="7804000" />
+      <workItem from="1719837481681" duration="8279000" />
+      <workItem from="1719859254684" duration="171000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -405,7 +406,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719842295737</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Update README">
+      <option name="closed" value="true" />
+      <created>1719845384511</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1719845384511</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +432,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix bug in damage/healing calculation" />
     <MESSAGE value="WIP: refactor action classes" />
     <MESSAGE value="Create elemental spell classes" />
     <MESSAGE value="Set spells for mage class" />
@@ -448,7 +456,8 @@
     <MESSAGE value="Adjust text formatting" />
     <MESSAGE value="Fix level up message being printed every battle" />
     <MESSAGE value="Update cleric description" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update cleric description" />
+    <MESSAGE value="Update README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -457,6 +466,11 @@
           <url>file://$PROJECT_DIR$/src/actions/EscapeAction.java</url>
           <line>9</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controllers/Battle.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
