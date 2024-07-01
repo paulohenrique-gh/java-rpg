@@ -49,7 +49,7 @@ public class Cleric extends PlayerCharacter {
     }
 
     public static String getClassDescription() {
-        return "Uma curandeira com habilidades de expurgar mortos-vivos";
+        return "Uma curandeira que manipula as forças da Luz";
     }
 
     @Override
