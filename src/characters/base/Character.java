@@ -27,12 +27,14 @@ public class Character {
     protected double damageModifier;
     protected StatusEffect currentStatus;
     protected boolean isAsleep;
+    protected boolean isStunned;
 
     public Character() {
         this.skillList = new ArrayList<>();
         this.itemList = new ArrayList<>();
         this.damageModifier = 1.0;
         this.isAsleep = false;
+        this.isStunned = false;
     }
 
     public String getName() {
@@ -149,6 +151,14 @@ public class Character {
         isAsleep = asleep;
     }
 
+    public boolean isStunned() {
+        return isStunned;
+    }
+
+    public void setStunned(boolean stunned) {
+        isStunned = stunned;
+    }
+
     public void addSkill(SkillAction skill) {
         this.skillList.add(skill);
     }
@@ -194,7 +204,7 @@ public class Character {
     }
 
     public void performAction(Character targetCharacter) {
-        if (this.isAsleep()) return;
+        if (this.isAsleep() || this.isStunned()) return;
 
         this.currentAction.perform(this, targetCharacter);
     }
@@ -204,4 +214,5 @@ public class Character {
 
         this.currentStatus.tick(this);
     }
+
 }

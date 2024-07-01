@@ -1,31 +1,70 @@
 package statusEffects;
 
 import characters.base.Character;
+import controllers.Battle;
 import statusEffects.base.StatusEffect;
 
 public class Stun extends StatusEffect {
-    private boolean isApplied;
+    private int maxActiveTurns;
+    private int remainingActiveTurns;
 
     public Stun() {
         super("Atordoamento", 0);
-        this.isApplied = false;
+        this.maxActiveTurns = 1;
+        this.remainingActiveTurns = 1;
     }
 
-    public boolean isApplied() {
-        return isApplied;
+    public int getMaxActiveTurns() {
+        return maxActiveTurns;
     }
 
-    public void setApplied(boolean applied) {
-        isApplied = applied;
+    public void setMaxActiveTurns(int maxActiveTurns) {
+        this.maxActiveTurns = maxActiveTurns;
+    }
+
+    public int getRemainingActiveTurns() {
+        return this.remainingActiveTurns;
+    }
+
+    public void setRemainingActiveTurns(int remainingActiveTurns) {
+        this.remainingActiveTurns = remainingActiveTurns;
+    }
+
+    private boolean isExpired() {
+        return this.getRemainingActiveTurns() <= 0;
+    }
+
+    private boolean isFirstTurnAfterStatusApplication(Character targetCharacter) {
+        return this.getRemainingActiveTurns() == this.getMaxActiveTurns() &&
+                !targetCharacter.isAsleep();
     }
 
     @Override
     public void tick(Character targetCharacter) {
-        if (this.isApplied()) return;
+        if (this.isExpired()) {
+            targetCharacter.setStunned(false);
+            return;
+        }
 
-        targetCharacter.setCurrentStatus(null);
-        this.setApplied(true);
+        if (this.isFirstTurnAfterStatusApplication(targetCharacter)) {
+            targetCharacter.setStunned(true);
+        }
+
+        if (!targetCharacter.equals(Battle.getAtiveCharacter())) {
+            return;
+        }
+
+        this.setRemainingActiveTurns(this.getRemainingActiveTurns() - 1);
+        if (this.isExpired()) {
+            this.cleanEffect(targetCharacter);
+        }
+
         this.logStun(targetCharacter);
+    }
+
+    private void cleanEffect(Character targetCharacter) {
+        targetCharacter.setStunned(false);
+        targetCharacter.setCurrentStatus(null);
     }
 
     private void logStun(Character targetCharacter) {

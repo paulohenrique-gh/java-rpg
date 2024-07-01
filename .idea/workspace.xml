@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Change escaping condition">
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="WIP: fix stun effect">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/enemies/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Dragon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/base/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/base/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/statusEffects/Stun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/statusEffects/Stun.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +111,7 @@
       <workItem from="1719750427815" duration="5476000" />
       <workItem from="1719755961303" duration="121000" />
       <workItem from="1719756091194" duration="7341000" />
-      <workItem from="1719765065009" duration="22657000" />
+      <workItem from="1719765065009" duration="23507000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -340,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719789607812</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="WIP: fix stun effect">
+      <option name="closed" value="true" />
+      <created>1719792148645</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1719792148645</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +363,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Set warrior base stats" />
     <MESSAGE value="Set warrior base skill&#10;&#10;-WIP: set turn order for battles" />
     <MESSAGE value="Add method for generating turn order" />
     <MESSAGE value="WIP: battle flow" />
@@ -383,7 +387,8 @@
     <MESSAGE value="Wake sleeping character on hit" />
     <MESSAGE value="Fix spell name" />
     <MESSAGE value="Change escaping condition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change escaping condition" />
+    <MESSAGE value="WIP: fix stun effect" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP: fix stun effect" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
