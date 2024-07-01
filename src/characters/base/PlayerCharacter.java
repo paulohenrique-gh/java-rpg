@@ -42,7 +42,20 @@ public class PlayerCharacter extends Character {
         while (this.getExp() >= this.getExpToNextLevel()) {
             this.setExp(this.getExp() - this.getExpToNextLevel());
             this.setLevel(this.getLevel() + 1);
+            this.updateAttributes();
             this.setExpToNextLevel(this.getLevel() * 20);
         }
+    }
+
+    private void updateAttributes() {
+        this.setMaxHitPoints((int) (this.getMaxHitPoints() + this.getMaxHitPoints() * 0.1));
+        this.setCurHitPoints((int) (this.getCurHitPoints() + this.getCurHitPoints() * 0.1));
+        this.setMaxMagicPoints((int) (this.getMaxMagicPoints() + this.getMaxMagicPoints() * 0.1));
+        this.setCurMagicPoints((int) (this.getCurMagicPoints() + this.getCurMagicPoints() * 0.1));
+        this.setAttack(this.getAttack() + this.getLevel());
+        this.setDefense(this.getDefense() + this.getLevel());
+        this.setResFire(this.getResFire() + this.getLevel());
+        this.setResIce(this.getResIce() + this.getLevel());
+        this.setResLight(this.getResLight() + this.getLevel());
     }
 }

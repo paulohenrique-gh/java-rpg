@@ -192,4 +192,10 @@ public class UserInterface {
         System.out.println("  TODOS OS MONSTROS FORAM DERROTADOS, PARABÉNS!   ");
         System.out.println("================================================\n");
     }
+
+    public void printLevelUp() {
+        System.out.println("\n================================================");
+        System.out.print(this.selectedCharacter.getName() + " agora é nível " + this.selectedCharacter.getLevel());
+        System.out.println("\n================================================");
+    }
 }

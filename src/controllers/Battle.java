@@ -101,6 +101,7 @@ public class Battle {
         this.setCurrentRound(0);
         if (this.getWinner().equals(this.getPlayerCharacter())) {
             this.getPlayerCharacter().updateExp(this.getEnemy().getExpOnKill());
+            ui.printLevelUp();
         }
     }
 

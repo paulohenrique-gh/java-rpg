@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Fix stun effect">
-      <change afterPath="$PROJECT_DIR$/src/characters/base/PlayerCharacter.java" afterDir="false" />
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Add level up mechanic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/base/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/base/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/enemies/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Dragon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/enemies/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Goblin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/enemies/Skeleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Skeleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/enemies/Troll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Troll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Cleric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Cleric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Mage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/base/PlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/base/PlayerCharacter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +44,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -122,7 +112,7 @@
       <workItem from="1719750427815" duration="5476000" />
       <workItem from="1719755961303" duration="121000" />
       <workItem from="1719756091194" duration="7341000" />
-      <workItem from="1719765065009" duration="25235000" />
+      <workItem from="1719765065009" duration="26453000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -364,7 +354,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719793015724</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Add level up mechanic">
+      <option name="closed" value="true" />
+      <created>1719794931562</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1719794931562</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +380,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add method for generating turn order" />
     <MESSAGE value="WIP: battle flow" />
     <MESSAGE value="Refactor UserInterface" />
     <MESSAGE value="Create classes for specific actions" />
@@ -407,25 +404,21 @@
     <MESSAGE value="Change escaping condition" />
     <MESSAGE value="WIP: fix stun effect" />
     <MESSAGE value="Fix stun effect" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix stun effect" />
+    <MESSAGE value="Add level up mechanic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add level up mechanic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/actions/skills/Heal.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/actions/EscapeAction.java</url>
           <line>9</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controllers/Battle.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/src/characters/base/PlayerCharacter.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -434,6 +427,7 @@
         <watch expression="this.isSameRound()" language="JAVA" />
         <watch expression="getCurrentRound()" language="JAVA" />
         <watch expression="this.getRemainingActiveTurns()" language="JAVA" />
+        <watch expression="this.getExp() &gt;= this.getExpToNextLevel()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
