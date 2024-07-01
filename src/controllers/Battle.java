@@ -5,7 +5,6 @@ import actions.base.BattleAction;
 import characters.base.Character;
 import characters.base.Enemy;
 import characters.base.PlayerCharacter;
-import characters.enemies.base.Boss;
 import characters.enemies.base.RegularMob;
 
 import java.util.*;
