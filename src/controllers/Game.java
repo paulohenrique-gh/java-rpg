@@ -52,7 +52,7 @@ public class Game {
             battle = new Battle(this.playerCharacter, enemy);
             this.ui.printBattleHeader();
 
-            System.out.println("Você se depara com um " + enemy.getName());
+            System.out.println(this.playerCharacter.getName() + " se depara com um " + enemy.getName());
             battle.start(this.ui);
             Character winner = battle.getWinner();
 

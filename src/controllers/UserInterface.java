@@ -21,7 +21,9 @@ public class UserInterface {
     private PlayerCharacter selectedCharacter;
 
     public void mainMenu() {
-        System.out.println("Bem-vindo ao Jogo!");
+        System.out.println("\n================================================");
+        System.out.println("                LENDAS DE NAHAR                  ");
+        System.out.println("================================================\n");
 
         while (true) {
             String classOptions = "Escolha uma classe: \n" +
@@ -60,7 +62,7 @@ public class UserInterface {
     }
 
     public void chooseName() {
-        System.out.println("Digite um nome para o seu personagem: ");
+        System.out.println("\nDigite um nome para o seu personagem: ");
         String name = scanner.nextLine();
         this.selectedCharacter.setName(name);
     }
@@ -69,7 +71,7 @@ public class UserInterface {
         BattleAction action = null;
 
         while (action == null) {
-            System.out.println("Escolha uma opção:\n");
+            System.out.println("\nEscolha uma opção:\n");
             System.out.println("1 - Atacar");
             System.out.println("2 - Usar habilidade");
             System.out.println("3 - Usar item");
@@ -111,7 +113,7 @@ public class UserInterface {
         SkillAction skill = null;
 
         while (skill == null) {
-            System.out.println("Escolha uma habilidade:\n");
+            System.out.println("\nEscolha uma habilidade:\n");
             List<SkillAction> skills = this.selectedCharacter.getSkillList();
             for (int i = 0; i < skills.size(); i++) {
                 this.printSkillOnMenu(i + 1, skills.get(i));

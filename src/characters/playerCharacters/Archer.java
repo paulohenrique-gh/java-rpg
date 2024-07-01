@@ -6,7 +6,6 @@ import characters.base.PlayerCharacter;
 import items.Item;
 import statusEffects.Poison;
 
-// TODO: calculate damage according to dex instead of attack
 public class Archer extends PlayerCharacter {
     private int dexterity;
 
