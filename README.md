@@ -4,9 +4,13 @@
 
 Inicialmente será solicitado que o jogador escolha uma classe e em seguida um nome para o personagem.
 
+![image](https://github.com/paulohenrique-gh/java-rpg/assets/124916478/93d2f98d-7ecb-43c5-b887-0b0bae6af745)
+
 Após escolha do personagem e nome, começa a sequência de 4 batalhas: 3 monstros normais e 1 chefe.
 
 No início da rodada o jogador pode escolher entre atacar, usar habilidade, usar item e fugir.
+
+![image](https://github.com/paulohenrique-gh/java-rpg/assets/124916478/427578c4-cf00-4d17-9ebf-4fbbe504334c)
 
 - Atacar: ataque normal com dano calculado de acordo com poder de ataque do personagem ativo e poder de defesa do personagem atacado
 - Usar habilidade: os personagens tem habilidades disponíveis de acordo com o arquétipo de suas classes.
@@ -39,7 +43,7 @@ O jogo acaba quando o jogador derrota todos os inimigos ou quando seus pontos de
 
 Herança e abstração foram utilizadas para reaproveitamento de atributos e comportamentos.
 
-Além disso, foi aplicado bastante polimorfismo declarando variáveis com um tipo mais genérico e instanciando objetos com tipos específicos, para que fosse possível reaproveitar vários métodos. Por exemplo, a classe abstrata `BattleAction` tem o método `perform` que as subclasse diretas ou seus descentes precisam implementar, e isso permite que variáveis do tipo `BattleAction` chamem o método `perform` com a implementação específica da classe do objeto
+Além disso, foi aplicado bastante polimorfismo declarando variáveis com um tipo mais genérico e instanciando objetos com tipos específicos, para que fosse possível reaproveitar vários métodos e evitar excesso de `if` para verificar tipos. Por exemplo, a classe abstrata `BattleAction` tem o método `perform` que as subclasse diretas ou seus descentes precisam implementar, e isso permite que variáveis do tipo `BattleAction` chamem o método `perform` com a implementação específica da classe do objeto
 
 ## Desafios extras implementados
 
@@ -50,3 +54,8 @@ Além disso, foi aplicado bastante polimorfismo declarando variáveis com um tip
   - Dormindo
 - Sistema de nível
 - Sistema de defesa
+
+## Diagrama de hierarquia das classes
+
+![image](https://github.com/paulohenrique-gh/java-rpg/assets/124916478/d7771a49-da73-4d19-ba95-a030d277cb0a)
+
