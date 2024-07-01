@@ -1,5 +1,7 @@
 package characters.base;
 
+import controllers.UserInterface;
+
 public class PlayerCharacter extends Character {
     protected int exp;
     protected int level;
@@ -41,10 +43,15 @@ public class PlayerCharacter extends Character {
 
         while (this.getExp() >= this.getExpToNextLevel()) {
             this.setExp(this.getExp() - this.getExpToNextLevel());
-            this.setLevel(this.getLevel() + 1);
             this.updateAttributes();
+            this.levelUp();
             this.setExpToNextLevel(this.getLevel() * 20);
         }
+    }
+
+    private void levelUp() {
+        this.setLevel(this.getLevel() + 1);
+        UserInterface.printLevelUp(this);
     }
 
     private void updateAttributes() {

@@ -4,7 +4,6 @@ import actions.AttackAction;
 import actions.EscapeAction;
 import actions.base.BattleAction;
 import actions.base.ItemAction;
-import characters.base.Character;
 import actions.base.SkillAction;
 import characters.base.PlayerCharacter;
 import characters.playerCharacters.Archer;
@@ -103,7 +102,6 @@ public class UserInterface {
                 default:
                     System.out.println("Opção inválida");
             }
-            ;
         }
 
         return action;
@@ -195,9 +193,9 @@ public class UserInterface {
         System.out.println("================================================\n");
     }
 
-    public void printLevelUp() {
+    public static void printLevelUp(PlayerCharacter playerCharacter) {
         System.out.println("\n================================================");
-        System.out.print(this.selectedCharacter.getName() + " agora é nível " + this.selectedCharacter.getLevel());
+        System.out.print(playerCharacter.getName() + " agora é nível " + playerCharacter.getLevel());
         System.out.println("\n================================================");
     }
 }

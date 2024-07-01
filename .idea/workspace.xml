@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Create README">
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Adjust text formatting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/base/PlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/base/PlayerCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/Battle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +113,7 @@
       <workItem from="1719755961303" duration="121000" />
       <workItem from="1719756091194" duration="7341000" />
       <workItem from="1719765065009" duration="27351000" />
-      <workItem from="1719837481681" duration="3755000" />
+      <workItem from="1719837481681" duration="4345000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -379,7 +379,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719840870933</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Adjust text formatting">
+      <option name="closed" value="true" />
+      <created>1719841320975</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1719841320975</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +405,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create classes for specific actions" />
     <MESSAGE value="Implement action according to user selection" />
     <MESSAGE value="Set base monsters stats" />
     <MESSAGE value="Fix bug in damage/healing calculation" />
@@ -422,7 +429,8 @@
     <MESSAGE value="Add level up mechanic" />
     <MESSAGE value="Update character attributes on levelup" />
     <MESSAGE value="Create README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create README" />
+    <MESSAGE value="Adjust text formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust text formatting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -431,11 +439,6 @@
           <url>file://$PROJECT_DIR$/src/actions/EscapeAction.java</url>
           <line>9</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/characters/base/PlayerCharacter.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
