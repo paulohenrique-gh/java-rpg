@@ -113,7 +113,7 @@ public class UserInterface {
             System.out.println("Escolha uma habilidade:\n");
             List<SkillAction> skills = this.selectedCharacter.getSkillList();
             for (int i = 0; i < skills.size(); i++) {
-                System.out.println((i + 1) + " - " + skills.get(i).getName());
+                this.printSkillOnMenu(i + 1, skills.get(i));
             }
 
             String chosenOption = scanner.nextLine();
@@ -133,6 +133,10 @@ public class UserInterface {
         return skill;
     }
 
+    private void printSkillOnMenu(int listIndex, SkillAction skill) {
+        System.out.println(listIndex + " - " + skill.getName() + " | Custo: " + skill.getMpCost() + " MP");
+    }
+
     private ItemAction chooseItem() {
         Item item = null;
 
@@ -140,7 +144,8 @@ public class UserInterface {
             System.out.println("Escolha um item:\n");
             List<Item> items = this.selectedCharacter.getItemList();
             for (int i = 0; i < items.size(); i++) {
-                System.out.println((i + 1) + " - " + items.get(i).getName());
+//                System.out.println((i + 1) + " - " + items.get(i).getName());
+                this.printItemOnMenu(i + 1, items.get(i));
             }
 
             String chosenOption = scanner.nextLine();
@@ -159,6 +164,12 @@ public class UserInterface {
         return new ItemAction(item);
     }
 
+    private void printItemOnMenu(int listIndex, Item item) {
+        System.out.println(listIndex + " - " + item.getName() +
+                " | Efeito: " + item.getStatusEffect().getName() +
+                " | Descrição: " + item.getDescription());
+    }
+
     public Character getSelectedCharacter() {
         return this.selectedCharacter;
     }
@@ -175,4 +186,9 @@ public class UserInterface {
         System.out.println("================================================\n");
     }
 
+    public void printGameFinished() {
+        System.out.println("\n================================================");
+        System.out.println("  TODOS OS MONSTROS FORAM DERROTADOS, PARABÉNS!   ");
+        System.out.println("================================================\n");
+    }
 }

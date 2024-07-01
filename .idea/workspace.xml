@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Fix spell name">
-      <change afterPath="$PROJECT_DIR$/src/characters/enemies/base/Boss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/characters/enemies/base/RegularMob.java" afterDir="false" />
+    <list default="true" id="b4a9aaed-8790-4d97-8924-789dfd53a6a9" name="Changes" comment="Change escaping condition">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/EscapeAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/EscapeAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/characters/enemies/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Dragon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/enemies/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Goblin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/enemies/Skeleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Skeleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/enemies/Troll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/enemies/Troll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Archer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/playerCharacters/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/playerCharacters/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +114,7 @@
       <workItem from="1719750427815" duration="5476000" />
       <workItem from="1719755961303" duration="121000" />
       <workItem from="1719756091194" duration="7341000" />
-      <workItem from="1719765065009" duration="20215000" />
+      <workItem from="1719765065009" duration="22657000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -335,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719788503438</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Change escaping condition">
+      <option name="closed" value="true" />
+      <created>1719789607812</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1719789607812</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +358,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="WIP: Main menu" />
     <MESSAGE value="Set warrior base stats" />
     <MESSAGE value="Set warrior base skill&#10;&#10;-WIP: set turn order for battles" />
     <MESSAGE value="Add method for generating turn order" />
@@ -378,7 +382,8 @@
     <MESSAGE value="WIP: sleep status&#10;&#10;TODO: wake character on attack" />
     <MESSAGE value="Wake sleeping character on hit" />
     <MESSAGE value="Fix spell name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix spell name" />
+    <MESSAGE value="Change escaping condition" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change escaping condition" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -387,11 +392,6 @@
           <url>file://$PROJECT_DIR$/src/actions/skills/Heal.java</url>
           <line>26</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/statusEffects/Burning.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/actions/EscapeAction.java</url>

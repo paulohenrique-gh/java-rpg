@@ -38,7 +38,7 @@ public class Mage extends Character {
     }
 
     private void setItems() {
-        Item fireBrand = new Item("Marca de Fogo", "Causa dano no alvo a cada turno", new Burning());
+        Item fireBrand = new Item("Marca de Fogo", "Causa dano de fogo no alvo a cada turno por 3 turnos", new Burning());
 
         this.addItem(fireBrand);
     }

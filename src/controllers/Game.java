@@ -45,8 +45,10 @@ public class Game {
         this.ui.mainMenu();
         this.setPlayerCharacter(this.ui.getSelectedCharacter());
 
+        Battle battle = null;
+
         for (Enemy enemy : this.enemies) {
-            Battle battle = new Battle(playerCharacter, enemy);
+            battle = new Battle(this.playerCharacter, enemy);
             this.ui.printBattleHeader();
 
             System.out.println("Você se depara com um " + enemy.getName());
@@ -61,6 +63,8 @@ public class Game {
             }
         }
 
-        System.out.println("Fim do jogo");
+        if (battle != null && battle.getWinner().equals(this.playerCharacter)) {
+            this.ui.printGameFinished();
+        }
     }
 }

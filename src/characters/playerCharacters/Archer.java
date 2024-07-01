@@ -42,7 +42,7 @@ public class Archer extends Character {
     }
 
     private void setItems() {
-        Item poisonBomb = new Item("Bomba de Veneno", "Causa dano no alvo a cada rodada", new Poison());
+        Item poisonBomb = new Item("Bomba de Veneno", "Causa dano no alvo a cada rodada por 3 rodadas", new Poison());
 
         this.addItem(poisonBomb);
     }

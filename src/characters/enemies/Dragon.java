@@ -6,8 +6,8 @@ public class Dragon extends Boss {
     public Dragon() {
         super();
         this.setName("Dragão");
-        this.setMaxHitPoints(100);
-        this.setCurHitPoints(100);
+        this.setMaxHitPoints(80);
+        this.setCurHitPoints(80);
         this.setAttack(15);
         this.setDefense(6);
         this.setResFire(5);
