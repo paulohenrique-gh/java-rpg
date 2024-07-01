@@ -1,14 +1,14 @@
 package characters.playerCharacters;
 
-import characters.base.Character;
 import actions.base.SkillAction;
 import actions.skills.FireSpell;
 import actions.skills.IceSpell;
 import actions.skills.ThunderSpell;
+import characters.base.PlayerCharacter;
 import items.Item;
 import statusEffects.Burning;
 
-public class Mage extends Character {
+public class Mage extends PlayerCharacter {
     private int intelligence;
 
     public Mage() {

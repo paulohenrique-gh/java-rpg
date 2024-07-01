@@ -1,12 +1,12 @@
 package characters.playerCharacters;
 
-import characters.base.Character;
 import actions.base.SkillAction;
 import actions.skills.PhysicalSkill;
+import characters.base.PlayerCharacter;
 import items.Item;
 import statusEffects.Poison;
 
-public class Archer extends Character {
+public class Archer extends PlayerCharacter {
     private int dexterity;
 
     public Archer() {

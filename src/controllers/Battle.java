@@ -4,20 +4,21 @@ import actions.EscapeAction;
 import actions.base.BattleAction;
 import characters.base.Character;
 import characters.base.Enemy;
+import characters.base.PlayerCharacter;
 import characters.enemies.base.Boss;
 import characters.enemies.base.RegularMob;
 
 import java.util.*;
 
 public class Battle {
-    private Character playerCharacter;
+    private PlayerCharacter playerCharacter;
     private Enemy enemy;
     private List<Character> turnOrder;
     private Character winner;
     private static int currentRound;
     private static Character ativeCharacter;
 
-    public Battle(Character playerCharacter, Enemy enemy) {
+    public Battle(PlayerCharacter playerCharacter, Enemy enemy) {
         this.playerCharacter = playerCharacter;
         this.enemy = enemy;
         this.turnOrder = new ArrayList<>(Arrays.asList(playerCharacter, enemy));
@@ -32,11 +33,11 @@ public class Battle {
         this.enemy = enemy;
     }
 
-    public Character getPlayerCharacter() {
+    public PlayerCharacter getPlayerCharacter() {
         return playerCharacter;
     }
 
-    public void setPlayerCharacter(Character playerCharacter) {
+    public void setPlayerCharacter(PlayerCharacter playerCharacter) {
         this.playerCharacter = playerCharacter;
     }
 
@@ -98,6 +99,9 @@ public class Battle {
 
         this.setWinner(winner);
         this.setCurrentRound(0);
+        if (this.getWinner().equals(this.getPlayerCharacter())) {
+            this.getPlayerCharacter().updateExp(this.getEnemy().getExpOnKill());
+        }
     }
 
     private void startTurn(Character activeCharacter, Character targetCharacter) {

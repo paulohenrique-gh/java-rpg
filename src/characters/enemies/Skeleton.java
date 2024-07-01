@@ -15,7 +15,7 @@ public class Skeleton extends RegularMob {
         this.setResThunder(2);
         this.setResLight(-3);
         this.setType("Inimigo comum");
-        this.setExp(35);
+        this.setExpOnKill(35);
     }
 
     @Override

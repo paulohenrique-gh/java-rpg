@@ -2,6 +2,7 @@ package controllers;
 
 import characters.base.Character;
 import characters.base.Enemy;
+import characters.base.PlayerCharacter;
 import characters.enemies.Goblin;
 import characters.enemies.Skeleton;
 import characters.enemies.Troll;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
-    private Character playerCharacter;
+    private PlayerCharacter playerCharacter;
     private List<Enemy> enemies;
     private UserInterface ui;
 
@@ -20,11 +21,11 @@ public class Game {
        this.setEnemies();
     }
 
-    public Character getPlayerCharacter() {
+    public PlayerCharacter getPlayerCharacter() {
         return playerCharacter;
     }
 
-    public void setPlayerCharacter(Character playerCharacter) {
+    public void setPlayerCharacter(PlayerCharacter playerCharacter) {
         this.playerCharacter = playerCharacter;
     }
 

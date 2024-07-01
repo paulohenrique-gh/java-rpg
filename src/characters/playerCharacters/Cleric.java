@@ -1,13 +1,13 @@
 package characters.playerCharacters;
 
-import characters.base.Character;
 import actions.base.SkillAction;
 import actions.skills.Heal;
 import actions.skills.LightSpell;
+import characters.base.PlayerCharacter;
 import items.Item;
 import statusEffects.Sleep;
 
-public class Cleric extends Character {
+public class Cleric extends PlayerCharacter {
     private int faith;
 
     public Cleric() {

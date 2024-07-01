@@ -5,7 +5,7 @@ import actions.base.BattleAction;
 
 public class Enemy extends Character {
     private String type;
-    private int exp;
+    private int expOnKill;
 
     @Override
     public void setCurrentAction(BattleAction currentAction) {
@@ -21,11 +21,11 @@ public class Enemy extends Character {
         this.type = type;
     }
 
-    public int getExp() {
-        return exp;
+    public int getExpOnKill() {
+        return expOnKill;
     }
 
-    public void setExp(int exp) {
-        this.exp = exp;
+    public void setExpOnKill(int expOnKill) {
+        this.expOnKill = expOnKill;
     }
 }

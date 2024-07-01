@@ -15,7 +15,7 @@ public class Dragon extends Boss {
         this.setResThunder(4);
         this.setResLight(3);
         this.setType("Chefe");
-        this.setExp(100);
+        this.setExpOnKill(100);
     }
 
     @Override

@@ -15,7 +15,7 @@ public class Goblin extends RegularMob {
         this.setResThunder(3);
         this.setResLight(2);
         this.setType("Inimigo comum");
-        this.setExp(20);
+        this.setExpOnKill(20);
     }
 
     @Override

@@ -1,12 +1,12 @@
 package characters.playerCharacters;
 
 import actions.base.SkillAction;
-import characters.base.Character;
 import actions.skills.Heal;
+import characters.base.PlayerCharacter;
 import items.Item;
 import statusEffects.Stun;
 
-public class Warrior extends Character {
+public class Warrior extends PlayerCharacter {
     public Warrior() {
         super();
         this.setMaxHitPoints(100);

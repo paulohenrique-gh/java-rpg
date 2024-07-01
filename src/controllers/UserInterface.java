@@ -6,6 +6,7 @@ import actions.base.BattleAction;
 import actions.base.ItemAction;
 import characters.base.Character;
 import actions.base.SkillAction;
+import characters.base.PlayerCharacter;
 import characters.playerCharacters.Archer;
 import characters.playerCharacters.Cleric;
 import characters.playerCharacters.Mage;
@@ -17,7 +18,7 @@ import java.util.Scanner;
 
 public class UserInterface {
     Scanner scanner = new Scanner(System.in);
-    private Character selectedCharacter;
+    private PlayerCharacter selectedCharacter;
 
     public void mainMenu() {
         System.out.println("Bem-vindo ao Jogo!");
@@ -170,7 +171,7 @@ public class UserInterface {
                 " | Descrição: " + item.getDescription());
     }
 
-    public Character getSelectedCharacter() {
+    public PlayerCharacter getSelectedCharacter() {
         return this.selectedCharacter;
     }
 
